@@ -5,56 +5,103 @@ function App() {
 
   return (
     <div className="min-h-screen bg-amber-50">
-      {/* NAVBAR */}
+ {/* NAVBAR */}
 <nav className="bg-black shadow-lg sticky top-0 z-50">
-  <div className="max-w-7xl mx-auto px-4 py-4">
-    <div className="flex justify-between items-center">
-      {/* Logo */}
-      <div className="flex items-center gap-3">
-        {/* Puoi aggiungere un logo qui se vuoi */}
-      </div>
-
-      {/* Menu Bottoni */}
-      <div className="flex gap-4">
+  <div className="max-w-7xl mx-auto px-4 py-6">
+    <div className="flex justify-center items-center">
+    
+      {/* Menu Bottoni Circolari */}
+      <div className="flex gap-6">
+        {/* Home */}
         <button
           onClick={() => setSezioneAttiva("home")}
-          className={`px-6 py-2 rounded-lg font-semibold transition ${
-            sezioneAttiva === "home"
-              ? "bg-white text-black"
-              : "bg-gray-800 text-white hover:bg-red-600"
+          className={`flex flex-col items-center gap-2 transition group ${
+            sezioneAttiva === "home" ? "" : "opacity-70 hover:opacity-100"
           }`}
         >
-          Home
+          <div className={`w-16 h-16 rounded-full flex items-center justify-center transition ${
+            sezioneAttiva === "home"
+              ? "bg-red-600 ring-2 ring-red-400"
+              : "bg-gray-800 group-hover:bg-gray-700"
+          }`}>
+            <img 
+              src="/house-chimney-heart.png" 
+              alt="Home" 
+              className={`w-8 h-8 transition ${
+                sezioneAttiva === "home" ? "" : "brightness-0 invert"
+              }`}
+            />
+          </div>
+          <span className="text-white text-sm font-medium">Home</span>
         </button>
+
+        {/* Menu */}
         <button
           onClick={() => setSezioneAttiva("menu")}
-          className={`px-6 py-2 rounded-lg font-semibold transition ${
-            sezioneAttiva === "menu"
-              ? "bg-white text-black"
-              : "bg-gray-800 text-white hover:bg-red-600"
+          className={`flex flex-col items-center gap-2 transition group ${
+            sezioneAttiva === "menu" ? "" : "opacity-70 hover:opacity-100"
           }`}
         >
-          Menu
+          <div className={`w-16 h-16 rounded-full flex items-center justify-center transition ${
+            sezioneAttiva === "menu"
+              ? "bg-red-600 ring-2 ring-red-400"
+              : "bg-gray-800 group-hover:bg-gray-700"
+          }`}>
+            <img 
+              src="/menu-burger.png" 
+              alt="Menu" 
+              className={`w-8 h-8 transition ${
+                sezioneAttiva === "menu" ? "" : "brightness-0 invert"
+              }`}
+            />
+          </div>
+          <span className="text-white text-sm font-medium">Menu</span>
         </button>
+
+        {/* Contatti */}
         <button
           onClick={() => setSezioneAttiva("contatti")}
-          className={`px-6 py-2 rounded-lg font-semibold transition ${
-            sezioneAttiva === "contatti"
-              ? "bg-white text-black"
-              : "bg-gray-800 text-white hover:bg-red-600"
+          className={`flex flex-col items-center gap-2 transition group ${
+            sezioneAttiva === "contatti" ? "" : "opacity-70 hover:opacity-100"
           }`}
         >
-          Contatti
+          <div className={`w-16 h-16 rounded-full flex items-center justify-center transition ${
+            sezioneAttiva === "contatti"
+              ? "bg-red-600 ring-2 ring-red-400"
+              : "bg-gray-800 group-hover:bg-gray-700"
+          }`}>
+            <img 
+              src="/phone-call.png" 
+              alt="Contatti" 
+              className={`w-8 h-8 transition ${
+                sezioneAttiva === "contatti" ? "" : "brightness-0 invert"
+              }`}
+            />
+          </div>
+          <span className="text-white text-sm font-medium">Contatti</span>
         </button>
+
+        {/* Social */}
         <button
           onClick={() => setSezioneAttiva("social")}
-          className={`px-6 py-2 rounded-lg font-semibold transition ${
-            sezioneAttiva === "social"
-              ? "bg-white text-black"
-              : "bg-gray-800 text-white hover:bg-red-600"
+          className={`flex flex-col items-center gap-2 transition group ${
+            sezioneAttiva === "social" ? "" : "opacity-70 hover:opacity-100"
           }`}
         >
-          Social
+          <div className={`w-16 h-16 rounded-full flex items-center justify-center transition ${
+            sezioneAttiva === "social"
+              ? "bg-red-600 ring-2 ring-red-400"
+              : "bg-gray-800 group-hover:bg-gray-700"
+          }`}>
+            <img 
+              src="/3917633.png" 
+              alt="Social" 
+              className={`w-8 h-8 transition ${
+                sezioneAttiva === "social" ? "" : "brightness-0 invert"
+              }`}
+            />
+          </div>
+          <span className="text-white text-sm font-medium">Social</span>
         </button>
       </div>
     </div>
@@ -96,7 +143,7 @@ function App() {
               <div className="grid md:grid-cols-2 gap-12">
                 {/* Colonna Sinistra */}
                 <div>
-                  <h3 className="text-4xl font-bold text-red-800 mb-6">
+                  <h3 className="text-4xl font-bold text-black-800 mb-6">
                     La Nostra Storia
                   </h3>
                   <p className="text-lg text-gray-700 mb-4">
@@ -119,8 +166,8 @@ function App() {
                 {/* Colonna Destra */}
                 <div className="space-y-6">
                   <div className="bg-white p-6 rounded-lg shadow-md">
-                    <div className="text-4xl mb-2">🍕</div>
-                    <h4 className="text-2xl font-bold text-red-800 mb-2">
+                    <div className="text-4xl mb-2"><img src="/pizza-slice.png" alt="pizza" className="w-8 h-8" /></div>
+                    <h4 className="text-2xl font-bold text-black-800 mb-2">
                       Pizza
                     </h4>
                     <p className="text-gray-600">
@@ -130,8 +177,8 @@ function App() {
                   </div>
 
                   <div className="bg-white p-6 rounded-lg shadow-md">
-                    <div className="text-4xl mb-2">🥗</div>
-                    <h4 className="text-2xl font-bold text-red-800 mb-2">
+                <div className="text-4xl mb-2"><img src="/recipe-book.png" alt="ingredienti" className="w-8 h-8" /></div>
+                    <h4 className="text-2xl font-bold text-black-800 mb-2">
                       Ingredienti Freschi
                     </h4>
                     <p className="text-gray-600">
@@ -140,8 +187,8 @@ function App() {
                   </div>
 
                   <div className="bg-white p-6 rounded-lg shadow-md">
-                    <div className="text-4xl mb-2">👨‍🍳</div>
-                    <h4 className="text-2xl font-bold text-red-800 mb-2">
+                  <div className="text-4xl mb-2"><img src="/hand-holding-heart.png" alt="tradizione" className="w-8 h-8" /></div>
+                    <h4 className="text-2xl font-bold text-black-800 mb-2">
                      tradizione
                     </h4>
                     <p className="text-gray-600">
@@ -157,13 +204,13 @@ function App() {
         {/* SEZIONE MENU */}
         {sezioneAttiva === "menu" && (
           <div className="max-w-6xl mx-auto px-4 py-16">
-            <h2 className="text-5xl font-bold text-red-800 text-center mb-12">
+            <h2 className="text-5xl font-bold text-black-800 text-center mb-12">
               Il Nostro Menu
             </h2>
 
             {/* Pizze Classiche */}
             <div className="mb-12">
-              <h3 className="text-3xl font-bold text-red-700 mb-6">
+              <h3 className="text-3xl font-bold text-black mb-6">
                 Pizze Classiche
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
@@ -206,10 +253,10 @@ function App() {
                     className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
                   >
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-bold text-red-800">
+                      <h4 className="text-xl font-bold text-black-800">
                         {pizza.nome}
                       </h4>
-                      <span className="text-2xl font-bold text-green-600">
+                      <span className="text-2xl font-bold text-red-600">
                         €{pizza.prezzo}
                       </span>
                     </div>
@@ -221,7 +268,7 @@ function App() {
 
             {/* Pizze Speciali */}
             <div>
-              <h3 className="text-3xl font-bold text-red-700 mb-6">
+              <h3 className="text-3xl font-bold text-black-700 mb-6">
                 ✨ Pizze Speciali
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
@@ -254,10 +301,10 @@ function App() {
                     className="bg-gradient-to-br from-red-50 to-amber-50 p-6 rounded-lg shadow-md hover:shadow-xl transition border-2 border-red-200"
                   >
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-bold text-red-800">
+                      <h4 className="text-xl font-bold text-black-800">
                         {pizza.nome}
                       </h4>
-                      <span className="text-2xl font-bold text-green-600">
+                      <span className="text-2xl font-bold text-red-600">
                         €{pizza.prezzo}
                       </span>
                     </div>
@@ -272,7 +319,7 @@ function App() {
         {/* SEZIONE CONTATTI */}
         {sezioneAttiva === "contatti" && (
           <div className="max-w-4xl mx-auto px-4 py-16">
-            <h2 className="text-5xl font-bold text-red-800 text-center mb-12">
+            <h2 className="text-5xl font-bold text-black-800 text-center mb-12">
               Contattaci
             </h2>
 
@@ -280,8 +327,8 @@ function App() {
               {/* Info Contatti */}
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <div className="text-3xl mb-3">📍</div>
-                  <h3 className="text-xl font-bold text-red-800 mb-2">
+                  <div className="text-3xl mb-3"><img src="/search-location.png" alt="localizzazione" className="w-20 h-20" /></div>
+                  <h3 className="text-xl font-bold text-black-800 mb-2">
                     Indirizzo
                   </h3>
                   <p className="text-gray-700">Via alcide de gasperi , 86</p>
@@ -289,8 +336,8 @@ function App() {
                 </div>
 
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <div className="text-3xl mb-3">📞</div>
-                  <h3 className="text-xl font-bold text-red-800 mb-2">
+                  <div className="text-3xl mb-3"><img src="/phone-call.png" alt="phone" className="w-20 h-20" /></div>
+                  <h3 className="text-xl font-bold text-black-800 mb-2">
                     Telefono
                   </h3>
                   <p className="text-gray-700">+39 06 1234567</p>
@@ -298,8 +345,8 @@ function App() {
                 </div>
 
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <div className="text-3xl mb-3">⏰</div>
-                  <h3 className="text-xl font-bold text-red-800 mb-2">Orari</h3>
+                  <div className="text-3xl mb-3"><img src="/clock-three.png" alt="orario"className="w-20 h-20" /></div>
+                  <h3 className="text-xl font-bold text-black-800 mb-2">Orari</h3>
                   <p className="text-gray-700">Lun-Dom: 12:00 - :00</p>
                   <p className="text-gray-700">Lun-Dom: 19:00 - 23:30</p>
                   <p className="text-red-600 font-semibold mt-2">
@@ -310,7 +357,7 @@ function App() {
 
               {/* Form Contatto */}
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold text-red-800 mb-6">
+                <h3 className="text-2xl font-bold text-black-800 mb-6">
                   Inviaci un messaggio
                 </h3>
                 <form className="space-y-4">
@@ -359,25 +406,25 @@ function App() {
         {/* SEZIONE SOCIAL */}
         {sezioneAttiva === "social" && (
           <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-            <h2 className="text-5xl font-bold text-red-800 mb-8">
+            <h2 className="text-5xl font-bold text-black-800 mb-8">
               Seguici sui Social
             </h2>
             <p className="text-xl text-gray-700 mb-12">
               Resta aggiornato sulle nostre novità, offerte speciali e eventi!
             </p>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Facebook */}
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-blue-600 hover:bg-blue-700 text-white p-8 rounded-lg shadow-lg transition transform hover:scale-105"
-              >
-                <div className="text-6xl mb-4"><img src="/facebgook.png" alt="" /></div>
-                <h3 className="text-2xl font-bold mb-2">Facebook</h3>
-                <p>@laperlaPizzeria</p>
+<div className="grid md:grid-cols-3 gap-8">
+  {/* Facebook */}
+  <a
+    href="https://facebook.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-blue-600 hover:bg-blue-700 text-white p-8 rounded-lg shadow-lg transition transform hover:scale-105"
+  >
+        <div className="text-6xl mb-4"><img src="public/facebook.png" alt="" /></div>
+                <h3 className="text-2xl font-bold mb-2">facebook</h3>
+                <p>@laperla_pizzeria</p>
               </a>
+
 
               {/* Instagram */}
               <a
@@ -386,7 +433,7 @@ function App() {
                 rel="noopener noreferrer"
                 className="bg-gradient-to-br from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white p-8 rounded-lg shadow-lg transition transform hover:scale-105"
               >
-                <div className="text-6xl mb-4"><img src="/instgra.png" alt="" /></div>
+                <div className="text-6xl mb-4"><img src="/instagram-circle.png" alt="" /></div>
                 <h3 className="text-2xl font-bold mb-2">Instagram</h3>
                 <p>@laperla_pizzeria</p>
               </a>
@@ -398,7 +445,8 @@ function App() {
                 rel="noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 text-white p-8 rounded-lg shadow-lg transition transform hover:scale-105"
               >
-                <div className="text-6xl mb-4">🦉</div>
+               
+                <div className="text-6xl mb-4"><img src="public/tripadvisor.png" alt="" /></div>
                 <h3 className="text-2xl font-bold mb-2">TripAdvisor</h3>
                 <p>Lascia una recensione</p>
               </a>
@@ -406,8 +454,8 @@ function App() {
 
             {/* Gallery Instagram Style */}
             <div className="mt-16">
-              <h3 className="text-3xl font-bold text-red-800 mb-8">
-                📷 Le Nostre Foto
+              <h3 className="text-3xl font-bold text-black-800 mb-8">
+                Le Nostre Foto
               </h3>
               <div className="grid grid-cols-3 gap-4">
                 {[1, 2, 3, 4, 5, 6].map((num) => (
@@ -435,13 +483,13 @@ function App() {
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-red-900 text-white py-8 mt-16">
+      <footer className="bg-black text-white py-8 mt-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-lg mb-2">🍕 La Perla Pizzeria Ristorante</p>
-          <p className="text-amber-200">
-            Dal 1985, la tradizione napoletana nel cuore della città
+          <p className="text-lg mb-2">La Perla Pizzeria Ristorante</p>
+          <p className="text-white-200">
+            Dal 1993, la tradizione nel cuore della città
           </p>
-          <p className="mt-4 text-sm text-amber-100">
+          <p className="mt-4 text-sm text-white-100">
             © 2025 - Tutti i diritti riservati
           </p>
         </div>
