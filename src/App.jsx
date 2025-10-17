@@ -250,11 +250,94 @@ function App() {
                       Il nostro team ha oltre 25 anni di esperienza combinata
                     </p>
                   </div>
+                    
                 </div>
               </div>
+              
             </div>
-          </div>
-        )}
+         {/* Presentazione Testuale */}
+<div className="max-w-6xl mx-auto px-4 py-16">
+  <div className="grid md:grid-cols-2 gap-12">
+    {/* ... tutto il codice esistente delle card ... */}
+  </div>
+</div>
+
+{/* Card Sala Interna Centrata */}
+<div className="max-w-4xl mx-auto px-4 pb-16">
+  <div className="bg-gradient-to-br from-white to-red-50 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500">
+    
+    {/* Immagine Sala */}
+    <div className="h-80 overflow-hidden relative">
+      <img
+        src="/la-perla-avetrana.jpg"
+        alt="Sala Interna"
+        className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+      />
+      {/* Badge sopra l'immagine */}
+      <div className="absolute top-6 left-6 bg-red-600 text-white px-6 py-2 rounded-full font-bold shadow-lg">
+        ✨ Sala Principale
+      </div>
+    </div>
+    
+    {/* Contenuto Testo */}
+    <div className="p-8 lg:p-12 text-center">
+      <div className="flex justify-center items-center gap-3 mb-4">
+        <span className="text-5xl">🍴</span>
+        <h4 className="text-4xl font-bold text-gray-800">La Nostra Sala Interna</h4>
+      </div>
+      
+      <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-2xl mx-auto">
+        Un ambiente caldo e accogliente dove potrete gustare le nostre specialità 
+        in un'atmosfera familiare. La nostra sala interna è stata progettata per 
+        farvi sentire a casa, con arredi eleganti e un'illuminazione soffusa che 
+        crea la giusta atmosfera per ogni occasione.
+      </p>
+      
+      {/* Caratteristiche in griglia */}
+      <div className="grid md:grid-cols-3 gap-6 mb-8">
+        <div className="flex flex-col items-center">
+          <span className="text-3xl mb-2">👥</span>
+          <span className="font-bold text-gray-800 text-lg">110 Posti</span>
+          <span className="text-gray-600 text-sm">Capacità totale</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <span className="text-3xl mb-2">❄️</span>
+          <span className="font-bold text-gray-800 text-lg">Climatizzata</span>
+          <span className="text-gray-600 text-sm">Estate e inverno</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <span className="text-3xl mb-2">🎵</span>
+          <span className="font-bold text-gray-800 text-lg">Musica</span>
+          <span className="text-gray-600 text-sm">Ambiente rilassante</span>
+        </div>
+      </div>
+      
+      {/* Lista benefici */}
+      <div className="flex flex-wrap justify-center gap-4 mb-8">
+        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
+          <span className="text-red-600">✓</span>
+          <span className="text-gray-700">Wi-Fi gratuito</span>
+        </div>
+        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
+          <span className="text-red-600">✓</span>
+          <span className="text-gray-700">Accessibile</span>
+        </div>
+        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
+          <span className="text-red-600">X</span>
+          <span className="text-gray-700">Zona NON fumatori</span>
+        </div>
+      </div>
+      
+      <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg">
+        Prenota un Tavolo
+      </button>
+    </div>
+  </div>
+</div>
+
+</div> 
+)}
+        
 {/* SEZIONE MENU */}
         {sezioneAttiva === "menu" && (
           <div className="max-w-6xl mx-auto px-4 py-16">
@@ -588,6 +671,34 @@ function App() {
                   </button>
                 </form>
               </div>
+              {/* Call to Action Centrale */}
+    <div className="mt-16 text-center bg-gradient-to-r from-black to-black p-12 rounded-3xl shadow-2xl">
+      <h4 className="text-3xl font-bold text-white mb-4">
+        Organizziamo il Tuo Evento Perfetto
+      </h4>
+      <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
+        Contattaci per un preventivo personalizzato. Ci occupiamo di ogni dettaglio 
+        per rendere il tuo evento indimenticabile.
+      </p>
+      <div className="flex flex-wrap justify-center gap-4">
+
+         <a
+          href="tel:+393481234567"
+          className="bg-white hover:bg-gray-100 text-red-600 px-8 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg"
+        >
+          📞 Chiama Ora
+        </a>
+
+        <a
+          href="https://wa.me/393481234567?text=Ciao!%20Vorrei%20informazioni%20per%20un%20evento"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg"
+        >
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
             </div>
           </div>
         )}
