@@ -519,7 +519,7 @@ function App() {
                 className=" text-black p-8 rounded-lg shadow-lg transition transform hover:scale-105"
               >
                 <div className="text-6xl mb-4">
-                  <img src="public/facebook.png" alt="" />
+                  <img src="/facebook.png" alt="" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">facebook</h3>
                 <p>@laperla_pizzeria</p>
@@ -547,7 +547,7 @@ function App() {
                 className=" text-black p-8 rounded-lg shadow-lg transition transform hover:scale-105"
               >
                 <div className="text-6xl mb-4">
-                  <img src="public/tripadvisor.png" alt="" />
+                  <img src="/tripadvisor.png" alt="" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">TripAdvisor</h3>
                 <p>Lascia una recensione</p>
