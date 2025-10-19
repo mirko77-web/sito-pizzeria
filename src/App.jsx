@@ -14,7 +14,7 @@ function App() {
     }));
   };
   return (
-    <div className="min-h-screen bg-amber-50">
+    <div className="min-h-screen bg-black">
       {/* NAVBAR */}
       <nav className="bg-black shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-6">
@@ -180,21 +180,21 @@ function App() {
               <div className="grid md:grid-cols-2 gap-12">
                 {/* Colonna Sinistra */}
                 <div>
-                  <h3 className="text-4xl font-bold text-black-800 mb-6">
+                  <h3 className="text-4xl font-bold text-red-800 mb-6">
                     La Nostra Storia
                   </h3>
-                  <p className="text-lg text-gray-700 mb-4">
+                  <p className="text-lg text-white mb-4">
                     Dal 1993, La Perla porta sulle vostre tavole il vero sapore
                     della pizza. La nostra passione per la tradizione si unisce
                     alla ricerca costante della qualità.
                   </p>
-                  <p className="text-lg text-gray-700 mb-4">
+                  <p className="text-lg text-white mb-4">
                     Ogni pizza è preparata con amore, utilizzando solo
                     ingredienti freschi e selezionati. Il nostro impasto viene
                     lavorato a mano e lasciato lievitare naturalmente per 48
                     ore.
                   </p>
-                  <p className="text-lg text-gray-700">
+                  <p className="text-lg text-white">
                     Vi aspettiamo per farvi vivere un'esperienza culinaria
                     autentica, in un ambiente accogliente e familiare.
                   </p>
@@ -250,295 +250,789 @@ function App() {
                       Il nostro team ha oltre 25 anni di esperienza combinata
                     </p>
                   </div>
-                    
                 </div>
               </div>
-              
             </div>
-         {/* Presentazione Testuale */}
-<div className="max-w-6xl mx-auto px-4 py-16">
-  <div className="grid md:grid-cols-2 gap-12">
-    {/* ... tutto il codice esistente delle card ... */}
-  </div>
-</div>
+            {/* Presentazione Testuale */}
+            <div className="max-w-6xl mx-auto px-4 py-16">
+              <div className="grid md:grid-cols-2 gap-12"></div>
+            </div>
 
-{/* Card Sala Interna Centrata */}
-<div className="max-w-4xl mx-auto px-4 pb-16">
-  <div className="bg-gradient-to-br from-white to-red-50 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500">
-    
-    {/* Immagine Sala */}
-    <div className="h-80 overflow-hidden relative">
-      <img
-        src="/la-perla-avetrana.jpg"
-        alt="Sala Interna"
-        className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-      />
-      {/* Badge sopra l'immagine */}
-      <div className="absolute top-6 left-6 bg-red-600 text-white px-6 py-2 rounded-full font-bold shadow-lg">
-        ✨ Sala Principale
-      </div>
-    </div>
-    
-    {/* Contenuto Testo */}
-    <div className="p-8 lg:p-12 text-center">
-      <div className="flex justify-center items-center gap-3 mb-4">
-        <span className="text-5xl">🍴</span>
-        <h4 className="text-4xl font-bold text-gray-800">La Nostra Sala Interna</h4>
-      </div>
-      
-      <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-2xl mx-auto">
-        Un ambiente caldo e accogliente dove potrete gustare le nostre specialità 
-        in un'atmosfera familiare. La nostra sala interna è stata progettata per 
-        farvi sentire a casa, con arredi eleganti e un'illuminazione soffusa che 
-        crea la giusta atmosfera per ogni occasione.
-      </p>
-      
-      {/* Caratteristiche in griglia */}
-      <div className="grid md:grid-cols-3 gap-6 mb-8">
-        <div className="flex flex-col items-center">
-          <span className="text-3xl mb-2">👥</span>
-          <span className="font-bold text-gray-800 text-lg">110 Posti</span>
-          <span className="text-gray-600 text-sm">Capacità totale</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <span className="text-3xl mb-2">❄️</span>
-          <span className="font-bold text-gray-800 text-lg">Climatizzata</span>
-          <span className="text-gray-600 text-sm">Estate e inverno</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <span className="text-3xl mb-2">🎵</span>
-          <span className="font-bold text-gray-800 text-lg">Musica</span>
-          <span className="text-gray-600 text-sm">Ambiente rilassante</span>
-        </div>
-      </div>
-      
-      {/* Lista benefici */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
-        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
-          <span className="text-red-600">✓</span>
-          <span className="text-gray-700">Wi-Fi gratuito</span>
-        </div>
-        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
-          <span className="text-red-600">✓</span>
-          <span className="text-gray-700">Accessibile</span>
-        </div>
-        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
-          <span className="text-red-600">X</span>
-          <span className="text-gray-700">Zona NON fumatori</span>
-        </div>
-      </div>
-      
-      <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg">
-        Prenota un Tavolo
-      </button>
-    </div>
-  </div>
-</div>
+            
+            {/* Sezione Sale - Layout a Scala */}
+            <div className="max-w-7xl mx-auto px-4 py-16">
+              <div className="space-y-32">
+                {/* Card 1 - Sala Principale (Immagine Sinistra, Testo Destra) */}
+                <div className="flex flex-col lg:flex-row items-center gap-12">
+                  {/* Immagine Card */}
+                  <div className="w-full lg:w-1/2 transform lg:-translate-y-12">
+                    <div className="relative group overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
+                      <img
+                        src="/la-perla-avetrana.jpg"
+                        alt="Sala Principale"
+                        className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
 
-</div> 
-)}
-        
-{/* SEZIONE MENU */}
-        {sezioneAttiva === "menu" && (
-          <div className="max-w-6xl mx-auto px-4 py-16">
-            <h2 className="text-5xl font-bold text-black-800 text-center mb-12">Il Nostro Menu</h2>
+                      {/* Overlay hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
 
+                      {/* Badge */}
+                      <div className="absolute top-6 left-6 bg-red-600 text-white px-6 py-3 rounded-full font-bold shadow-lg">
+                        ✨ Sala Principale
+                      </div>
 
-            {/* Bottone Pizze Classiche con toggle */}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("pizzeClassiche")}
-              aria-expanded={sezioniMenuAperte.pizzeClassiche}
-            >
-              <img src="/pizza-slice.png" alt="" className="w-8 h-8 mr-2 invert color-white" />Pizze Classiche
-              <span>{sezioniMenuAperte.pizzeClassiche ? "▲" : "▼"}</span>
-            </button>
+                      {/* Testo hover */}
+                      <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <p className="text-lg font-semibold">
+                          Clicca per scoprire di più...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
+                  {/* Testo */}
+                  <div className="w-full lg:w-1/2">
+                    <div className="flex items-center gap-3 mb-6">
+                      <span className="text-6xl">🍴</span>
+                      <h4 className="text-5xl font-bold text-white">
+                        Sala Principale
+                      </h4>
+                    </div>
 
-            {sezioniMenuAperte.pizzeClassiche && (
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                {[
-                  { nome: "Margherita", ingredienti: "Pomodoro, mozzarella, basilico", prezzo: "7.00" },
-                  { nome: "Marinara", ingredienti: "Pomodoro, aglio, origano, olio evo", prezzo: "6.00" },
-                  { nome: "Diavola", ingredienti: "Pomodoro, mozzarella, salame piccante", prezzo: "8.50" },
-                  { nome: "Quattro Stagioni", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive", prezzo: "10.00" },
-                  { nome: "Capricciosa", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi", prezzo: "9.50" },
-                  { nome: "Quattro Formaggi", ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano", prezzo: "9.00" }
-                ].map((pizza) => (
-                  <div key={pizza.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-bold text-black-800">{pizza.nome}</h4>
-                      <span className="text-2xl font-bold text-red-600">€{pizza.prezzo}</span>
-                    </div>
-                    <p className="text-gray-600">{pizza.ingredienti}</p>
-                  </div>
-                ))}
-              </div>
-            )}
+                    <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                      Un ambiente caldo e accogliente dove potrete gustare le
+                      nostre specialità in un'atmosfera familiare. La nostra
+                      sala interna è stata progettata per farvi sentire a casa,
+                      con arredi eleganti e un'illuminazione soffusa.
+                    </p>
 
+                    {/* Caratteristiche */}
+                    <div className="space-y-4 mb-8">
+                      <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
+                        <span className="text-4xl">👥</span>
+                        <div>
+                          <span className="font-bold text-white text-xl block">
+                            110 Posti
+                          </span>
+                          <span className="text-gray-400">Capacità totale</span>
+                        </div>
+                      </div>
 
-            {/* Bottone Pizze Speciali con toggle */}
-           
-              <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("pizzeClassiche")}
-              aria-expanded={sezioniMenuAperte.pizzeClassiche}
-            >
-              <img src="/pizza-whole-slice.png" alt="" className="w-8 h-8 mr-2 invert color-white" />Pizze speciali 
-              <span>{sezioniMenuAperte.pizzeClassiche ? "▲" : "▼"}</span>
-            </button>
+                      <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
+                        <span className="text-4xl">❄️</span>
+                        <div>
+                          <span className="font-bold text-white text-xl block">
+                            Climatizzata
+                          </span>
+                          <span className="text-gray-400">
+                            Estate e inverno
+                          </span>
+                        </div>
+                      </div>
 
+                      <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
+                        <span className="text-4xl">🎵</span>
+                        <div>
+                          <span className="font-bold text-white text-xl block">
+                            Musica
+                          </span>
+                          <span className="text-gray-400">
+                            Ambiente rilassante
+                          </span>
+                        </div>
+                      </div>
+                    </div>
 
-            {sezioniMenuAperte.pizzeSpeciali && (
-              <div className="grid md:grid-cols-2 gap-6">
-                {[
-                  { nome: "La Perla", ingredienti: "Pomodoro, bufala, pachino, rucola, scaglie di parmigiano", prezzo: "12.00" },
-                  { nome: "Salsiccia e Friarielli", ingredienti: "Mozzarella, salsiccia napoletana, friarielli", prezzo: "11.00" },
-                  { nome: "Tartufata", ingredienti: "Mozzarella, funghi porcini, crema di tartufo", prezzo: "13.50" },
-                  { nome: "Burrata e Crudo", ingredienti: "Pomodoro, burrata, prosciutto crudo di Parma, rucola", prezzo: "14.00" }
-                ].map((pizza) => (
-                  <div key={pizza.nome} className="bg-gradient-to-br from-red-50 to-amber-50 p-6 rounded-lg shadow-md hover:shadow-xl transition border-2 border-red-200">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-bold text-black-800">{pizza.nome}</h4>
-                      <span className="text-2xl font-bold text-red-600">€{pizza.prezzo}</span>
-                    </div>
-                    <p className="text-gray-600">{pizza.ingredienti}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-               {/* Bottone Pizze Classiche con toggle */}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("primiPiatti")}
-              aria-expanded={sezioniMenuAperte.primiPiatti}
-            >
-              <img src="/fork-spaghetti.png" alt="" className="w-8 h-8 mr-2 invert color-white" />Primi Piatti
-              <span>{sezioniMenuAperte.primiPiatti ? "▲" : "▼"}</span>
-            </button>
+                    {/* Badge benefici */}
+                    <div className="flex flex-wrap gap-3 mb-8">
+                      <span className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        ✓ Wi-Fi gratuito
+                      </span>
+                      <span className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        ✓ Accessibile
+                      </span>
+                      <span className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        ✗ Zona NON fumatori
+                      </span>
+                    </div>
 
+                    <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg">
+                      Prenota un Tavolo
+                    </button>
+                  </div>
+                </div>
 
-            {sezioniMenuAperte.primiPiatti && (
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                {[
-                  { nome: "Margherita", ingredienti: "Pomodoro, mozzarella, basilico", prezzo: "7.00" },
-                  { nome: "Marinara", ingredienti: "Pomodoro, aglio, origano, olio evo", prezzo: "6.00" },
-                  { nome: "Diavola", ingredienti: "Pomodoro, mozzarella, salame piccante", prezzo: "8.50" },
-                  { nome: "Quattro Stagioni", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive", prezzo: "10.00" },
-                  { nome: "Capricciosa", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi", prezzo: "9.50" },
-                  { nome: "Quattro Formaggi", ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano", prezzo: "9.00" }
-                ].map((pizza) => (
-                  <div key={pizza.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-bold text-black-800">{pizza.nome}</h4>
-                      <span className="text-2xl font-bold text-red-600">€{pizza.prezzo}</span>
-                    </div>
-                    <p className="text-gray-600">{pizza.ingredienti}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-               {/* Bottone Pizze Classiche con toggle */}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("secondiPiatti")}
-              aria-expanded={sezioniMenuAperte.secondiPiatti}
-            >
-              <img src="/steak.png" alt="" className="w-8 h-8 mr-2 invert color-white" /> Secondi Piatti
-              <span>{sezioniMenuAperte.secondiPiatti ? "▲" : "▼"}</span>
-            </button>
+                {/* Card 2 - Giardino/Sala Eventi (Testo Sinistra, Immagine Destra) */}
+                <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+                  {/* Immagine Card */}
+                  <div className="w-full lg:w-1/2 transform lg:translate-y-12">
+                    <div className="relative group overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
+                      <img
+                        src="/giardino.jpg"
+                        alt="Giardino"
+                        className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
 
+                      {/* Overlay hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
 
-            {sezioniMenuAperte.secondiPiatti && (
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                {[
-                  { nome: "Margherita", ingredienti: "Pomodoro, mozzarella, basilico", prezzo: "7.00" },
-                  { nome: "Marinara", ingredienti: "Pomodoro, aglio, origano, olio evo", prezzo: "6.00" },
-                  { nome: "Diavola", ingredienti: "Pomodoro, mozzarella, salame piccante", prezzo: "8.50" },
-                  { nome: "Quattro Stagioni", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive", prezzo: "10.00" },
-                  { nome: "Capricciosa", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi", prezzo: "9.50" },
-                  { nome: "Quattro Formaggi", ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano", prezzo: "9.00" }
-                ].map((pizza) => (
-                  <div key={pizza.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-bold text-black-800">{pizza.nome}</h4>
-                      <span className="text-2xl font-bold text-red-600">€{pizza.prezzo}</span>
-                    </div>
-                    <p className="text-gray-600">{pizza.ingredienti}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-   {/* Bottone Pizze Classiche con toggle */}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("bevande")}
-              aria-expanded={sezioniMenuAperte.bevande}
-            >
-              <img src="/glass-cheers.png" alt="" className="w-8 h-8 mr-2 invert color-white" />bevande
-              <span>{sezioniMenuAperte.bevande ? "▲" : "▼"}</span>
-            </button>
+                      {/* Badge */}
+                      <div className="absolute top-6 right-6 bg-green-600 text-white px-6 py-3 rounded-full font-bold shadow-lg">
+                        🌳 Giardino
+                      </div>
 
+                      {/* Testo hover */}
+                      <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <p className="text-lg font-semibold">
+                          Clicca per scoprire di più...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-            {sezioniMenuAperte.bevande && (
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                {[
-                  { nome: "Margherita", ingredienti: "Pomodoro, mozzarella, basilico", prezzo: "7.00" },
-                  { nome: "Marinara", ingredienti: "Pomodoro, aglio, origano, olio evo", prezzo: "6.00" },
-                  { nome: "Diavola", ingredienti: "Pomodoro, mozzarella, salame piccante", prezzo: "8.50" },
-                  { nome: "Quattro Stagioni", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive", prezzo: "10.00" },
-                  { nome: "Capricciosa", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi", prezzo: "9.50" },
-                  { nome: "Quattro Formaggi", ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano", prezzo: "9.00" }
-                ].map((pizza) => (
-                  <div key={pizza.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-bold text-black-800">{pizza.nome}</h4>
-                      <span className="text-2xl font-bold text-red-600">€{pizza.prezzo}</span>
-                    </div>
-                    <p className="text-gray-600">{pizza.ingredienti}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-   {/* Bottone Pizze Classiche con toggle */}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("dessert")}
-              aria-expanded={sezioniMenuAperte.dessert}
-            >
-              <img src="/cheese-cake.png" alt="" className="w-8 h-8 mr-2 invert color-white" />dessert
-              <span>{sezioniMenuAperte.dessert ? "▲" : "▼"}</span>
-            </button>
+                  {/* Testo */}
+                  <div className="w-full lg:w-1/2">
+                    <div className="flex items-center gap-3 mb-6">
+                      <span className="text-6xl">🌳</span>
+                      <h4 className="text-5xl font-bold text-white">
+                        Giardino & Feste
+                      </h4>
+                    </div>
 
+                    <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                      Un'oasi verde all'aperto perfetta per le serate estive. Il
+                      nostro giardino offre un ampio spazio
+                      ideale per feste, battesimi, comunioni e cene sotto le
+                      stelle in un'atmosfera magica.
+                    </p>
 
-            {sezioniMenuAperte.dessert && (
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                {[
-                  { nome: "Margherita", ingredienti: "Pomodoro, mozzarella, basilico", prezzo: "7.00" },
-                  { nome: "Marinara", ingredienti: "Pomodoro, aglio, origano, olio evo", prezzo: "6.00" },
-                  { nome: "Diavola", ingredienti: "Pomodoro, mozzarella, salame piccante", prezzo: "8.50" },
-                  { nome: "Quattro Stagioni", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive", prezzo: "10.00" },
-                  { nome: "Capricciosa", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi", prezzo: "9.50" },
-                  { nome: "Quattro Formaggi", ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano", prezzo: "9.00" }
-                ].map((pizza) => (
-                  <div key={pizza.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-bold text-black-800">{pizza.nome}</h4>
-                      <span className="text-2xl font-bold text-red-600">€{pizza.prezzo}</span>
-                    </div>
-                    <p className="text-gray-600">{pizza.ingredienti}</p>
-                  </div>
-                ))}
-              </div>
-            )}
+                    {/* Caratteristiche */}
+                    <div className="space-y-4 mb-8">
+                      <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
+                        <span className="text-4xl">🎊</span>
+                        <div>
+                          <span className="font-bold text-white text-xl block">
+                            Eventi Speciali
+                          </span>
+                          <span className="text-gray-400">
+                            Fino a 70 persone
+                          </span>
+                        </div>
+                      </div>
 
+                      <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
+                        <span className="text-4xl">💡</span>
+                        <div>
+                          <span className="font-bold text-white text-xl block">
+                            Illuminazione
+                          </span>
+                          <span className="text-gray-400">Scenografica</span>
+                        </div>
+                      </div>
 
+                   */   <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
+                        <span className="text-4xl">👶</span>
+                        <div>
+                          <span className="font-bold text-white text-xl block">
+                            
+                          </span>
+                          <span className="text-gray-400"></span>
+                        </div>
+                      </div> */
+                    </div>
 
-          </div>
+                    {/* Badge benefici */}
+                    <div className="flex flex-wrap gap-3 mb-8">
+                      <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        ✓ Spazio 200 mq
+                      </span>
+                      <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        ✓ Zona coperta
+                      </span>
+                      <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        ✓ Parcheggio
+                      </span>
+                    </div>
+
+                    <button className="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg">
+                      Richiedi Preventivo
+                    </button>
+                  </div>
+                </div>
+
+                {/* Card 3 - Sala Eventi (Immagine Sinistra, Testo Destra) */}
+                <div className="flex flex-col lg:flex-row items-center gap-12">
+                  {/* Immagine Card */}
+                  <div className="w-full lg:w-1/2 transform lg:-translate-y-12">
+                    <div className="relative group overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
+                      <img
+                        src="/sala-eventi.jpg"
+                        alt="Sala Eventi"
+                        className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+
+                      {/* Overlay hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
+
+                      {/* Badge */}
+                      <div className="absolute top-6 left-6 bg-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-lg">
+                        🎉 Sala Eventi
+                      </div>
+
+                      {/* Testo hover */}
+                      <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <p className="text-lg font-semibold">
+                          Clicca per scoprire di più...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Testo */}
+                  <div className="w-full lg:w-1/2">
+                    <div className="flex items-center gap-3 mb-6">
+                      <span className="text-6xl">🎊</span>
+                      <h4 className="text-5xl font-bold text-white">
+                        Sala Eventi
+                      </h4>
+                    </div>
+
+                    <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                      Uno spazio elegante e raffinato dedicato ai tuoi momenti
+                      più importanti. Ideale per matrimoni, compleanni,
+                      battesimi, comunioni e cerimonie aziendali. Un ambiente
+                      che renderà il tuo evento davvero speciale.
+                    </p>
+
+                    {/* Caratteristiche */}
+                    <div className="space-y-4 mb-8">
+                      <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
+                        <span className="text-4xl">💍</span>
+                        <div>
+                          <span className="font-bold text-white text-xl block">
+                            Matrimoni
+                          </span>
+                          <span className="text-gray-400">
+                            Fino a 120 persone
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
+                        <span className="text-4xl">🎤</span>
+                        <div>
+                          <span className="font-bold text-white text-xl block">
+                            Audio Pro
+                          </span>
+                          <span className="text-gray-400">
+                            Sistema professionale
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
+                        <span className="text-4xl">🍽️</span>
+                        <div>
+                          <span className="font-bold text-white text-xl block">
+                            Menu Custom
+                          </span>
+                          <span className="text-gray-400">
+                            Personalizzabile
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Badge benefici */}
+                    <div className="flex flex-wrap gap-3 mb-8">
+                      <span className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        ✓ Servizio catering
+                      </span>
+                      <span className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        ✓ Decorazioni incluse
+                      </span>
+                      <span className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        ✓ Staff dedicato
+                      </span>
+                    </div>
+
+                    <button className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg">
+                      Organizza Evento
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
-
+        {/* SEZIONE MENU */}       {" "}
+        {sezioneAttiva === "menu" && (
+          <div className="max-w-6xl mx-auto px-4 py-16">
+                       {" "}
+            <h2 className="text-5xl font-bold text-black-800 text-center mb-12">
+              Il Nostro Menu
+            </h2>
+                        {/* Bottone Pizze Classiche con toggle */}           {" "}
+            <button
+              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
+              onClick={() => toggleSezioneMenu("pizzeClassiche")}
+              aria-expanded={sezioniMenuAperte.pizzeClassiche}
+            >
+                           {" "}
+              <img
+                src="/pizza-slice.png"
+                alt=""
+                className="w-8 h-8 mr-2 invert color-white"
+              />
+              Pizze Classiche              {" "}
+              <span>{sezioniMenuAperte.pizzeClassiche ? "▲" : "▼"}</span>       
+                 {" "}
+            </button>
+                       {" "}
+            {sezioniMenuAperte.pizzeClassiche && (
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                               {" "}
+                {[
+                  {
+                    nome: "Margherita",
+                    ingredienti: "Pomodoro, mozzarella, basilico",
+                    prezzo: "7.00",
+                  },
+                  {
+                    nome: "Marinara",
+                    ingredienti: "Pomodoro, aglio, origano, olio evo",
+                    prezzo: "6.00",
+                  },
+                  {
+                    nome: "Diavola",
+                    ingredienti: "Pomodoro, mozzarella, salame piccante",
+                    prezzo: "8.50",
+                  },
+                  {
+                    nome: "Quattro Stagioni",
+                    ingredienti:
+                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
+                    prezzo: "10.00",
+                  },
+                  {
+                    nome: "Capricciosa",
+                    ingredienti:
+                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
+                    prezzo: "9.50",
+                  },
+                  {
+                    nome: "Quattro Formaggi",
+                    ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
+                    prezzo: "9.00",
+                  },
+                ].map((pizza) => (
+                  <div
+                    key={pizza.nome}
+                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                  >
+                                       {" "}
+                    <div className="flex justify-between items-start mb-2">
+                                           {" "}
+                      <h4 className="text-xl font-bold text-black-800">
+                        {pizza.nome}
+                      </h4>
+                                           {" "}
+                      <span className="text-2xl font-bold text-red-600">
+                        €{pizza.prezzo}
+                      </span>
+                                         {" "}
+                    </div>
+                                       {" "}
+                    <p className="text-gray-600">{pizza.ingredienti}</p>       
+                             {" "}
+                  </div>
+                ))}
+                             {" "}
+              </div>
+            )}
+                        {/* Bottone Pizze Speciali con toggle */}               
+                     {" "}
+            <button
+              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
+              onClick={() => toggleSezioneMenu("pizzeClassiche")}
+              aria-expanded={sezioniMenuAperte.pizzeClassiche}
+            >
+                           {" "}
+              <img
+                src="/pizza-whole-slice.png"
+                alt=""
+                className="w-8 h-8 mr-2 invert color-white"
+              />
+              Pizze speciali              {" "}
+              <span>{sezioniMenuAperte.pizzeClassiche ? "▲" : "▼"}</span>       
+                 {" "}
+            </button>
+                       {" "}
+            {sezioniMenuAperte.pizzeSpeciali && (
+              <div className="grid md:grid-cols-2 gap-6">
+                               {" "}
+                {[
+                  {
+                    nome: "La Perla",
+                    ingredienti:
+                      "Pomodoro, bufala, pachino, rucola, scaglie di parmigiano",
+                    prezzo: "12.00",
+                  },
+                  {
+                    nome: "Salsiccia e Friarielli",
+                    ingredienti: "Mozzarella, salsiccia napoletana, friarielli",
+                    prezzo: "11.00",
+                  },
+                  {
+                    nome: "Tartufata",
+                    ingredienti: "Mozzarella, funghi porcini, crema di tartufo",
+                    prezzo: "13.50",
+                  },
+                  {
+                    nome: "Burrata e Crudo",
+                    ingredienti:
+                      "Pomodoro, burrata, prosciutto crudo di Parma, rucola",
+                    prezzo: "14.00",
+                  },
+                ].map((pizza) => (
+                  <div
+                    key={pizza.nome}
+                    className="bg-gradient-to-br from-red-50 to-amber-50 p-6 rounded-lg shadow-md hover:shadow-xl transition border-2 border-red-200"
+                  >
+                                       {" "}
+                    <div className="flex justify-between items-start mb-2">
+                                           {" "}
+                      <h4 className="text-xl font-bold text-black-800">
+                        {pizza.nome}
+                      </h4>
+                                           {" "}
+                      <span className="text-2xl font-bold text-red-600">
+                        €{pizza.prezzo}
+                      </span>
+                                         {" "}
+                    </div>
+                                       {" "}
+                    <p className="text-gray-600">{pizza.ingredienti}</p>       
+                             {" "}
+                  </div>
+                ))}
+                             {" "}
+              </div>
+            )}
+                           {/* Bottone Pizze Classiche con toggle */}           {" "}
+            <button
+              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
+              onClick={() => toggleSezioneMenu("primiPiatti")}
+              aria-expanded={sezioniMenuAperte.primiPiatti}
+            >
+                           {" "}
+              <img
+                src="/fork-spaghetti.png"
+                alt=""
+                className="w-8 h-8 mr-2 invert color-white"
+              />
+              Primi Piatti              {" "}
+              <span>{sezioniMenuAperte.primiPiatti ? "▲" : "▼"}</span>         
+               {" "}
+            </button>
+                       {" "}
+            {sezioniMenuAperte.primiPiatti && (
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                               {" "}
+                {[
+                  {
+                    nome: "Margherita",
+                    ingredienti: "Pomodoro, mozzarella, basilico",
+                    prezzo: "7.00",
+                  },
+                  {
+                    nome: "Marinara",
+                    ingredienti: "Pomodoro, aglio, origano, olio evo",
+                    prezzo: "6.00",
+                  },
+                  {
+                    nome: "Diavola",
+                    ingredienti: "Pomodoro, mozzarella, salame piccante",
+                    prezzo: "8.50",
+                  },
+                  {
+                    nome: "Quattro Stagioni",
+                    ingredienti:
+                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
+                    prezzo: "10.00",
+                  },
+                  {
+                    nome: "Capricciosa",
+                    ingredienti:
+                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
+                    prezzo: "9.50",
+                  },
+                  {
+                    nome: "Quattro Formaggi",
+                    ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
+                    prezzo: "9.00",
+                  },
+                ].map((pizza) => (
+                  <div
+                    key={pizza.nome}
+                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                  >
+                                       {" "}
+                    <div className="flex justify-between items-start mb-2">
+                                           {" "}
+                      <h4 className="text-xl font-bold text-black-800">
+                        {pizza.nome}
+                      </h4>
+                                           {" "}
+                      <span className="text-2xl font-bold text-red-600">
+                        €{pizza.prezzo}
+                      </span>
+                                         {" "}
+                    </div>
+                                       {" "}
+                    <p className="text-gray-600">{pizza.ingredienti}</p>       
+                             {" "}
+                  </div>
+                ))}
+                             {" "}
+              </div>
+            )}
+                           {/* Bottone Pizze Classiche con toggle */}           {" "}
+            <button
+              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
+              onClick={() => toggleSezioneMenu("secondiPiatti")}
+              aria-expanded={sezioniMenuAperte.secondiPiatti}
+            >
+                           {" "}
+              <img
+                src="/steak.png"
+                alt=""
+                className="w-8 h-8 mr-2 invert color-white"
+              />{" "}
+              Secondi Piatti              {" "}
+              <span>{sezioniMenuAperte.secondiPiatti ? "▲" : "▼"}</span>       
+                 {" "}
+            </button>
+                       {" "}
+            {sezioniMenuAperte.secondiPiatti && (
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                               {" "}
+                {[
+                  {
+                    nome: "Margherita",
+                    ingredienti: "Pomodoro, mozzarella, basilico",
+                    prezzo: "7.00",
+                  },
+                  {
+                    nome: "Marinara",
+                    ingredienti: "Pomodoro, aglio, origano, olio evo",
+                    prezzo: "6.00",
+                  },
+                  {
+                    nome: "Diavola",
+                    ingredienti: "Pomodoro, mozzarella, salame piccante",
+                    prezzo: "8.50",
+                  },
+                  {
+                    nome: "Quattro Stagioni",
+                    ingredienti:
+                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
+                    prezzo: "10.00",
+                  },
+                  {
+                    nome: "Capricciosa",
+                    ingredienti:
+                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
+                    prezzo: "9.50",
+                  },
+                  {
+                    nome: "Quattro Formaggi",
+                    ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
+                    prezzo: "9.00",
+                  },
+                ].map((pizza) => (
+                  <div
+                    key={pizza.nome}
+                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                  >
+                                       {" "}
+                    <div className="flex justify-between items-start mb-2">
+                                           {" "}
+                      <h4 className="text-xl font-bold text-black-800">
+                        {pizza.nome}
+                      </h4>
+                                           {" "}
+                      <span className="text-2xl font-bold text-red-600">
+                        €{pizza.prezzo}
+                      </span>
+                                         {" "}
+                    </div>
+                                       {" "}
+                    <p className="text-gray-600">{pizza.ingredienti}</p>       
+                             {" "}
+                  </div>
+                ))}
+                             {" "}
+              </div>
+            )}
+               {/* Bottone Pizze Classiche con toggle */}           {" "}
+            <button
+              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
+              onClick={() => toggleSezioneMenu("bevande")}
+              aria-expanded={sezioniMenuAperte.bevande}
+            >
+                           {" "}
+              <img
+                src="/glass-cheers.png"
+                alt=""
+                className="w-8 h-8 mr-2 invert color-white"
+              />
+              bevande              {" "}
+              <span>{sezioniMenuAperte.bevande ? "▲" : "▼"}</span>           {" "}
+            </button>
+                       {" "}
+            {sezioniMenuAperte.bevande && (
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                               {" "}
+                {[
+                  {
+                    nome: "Margherita",
+                    ingredienti: "Pomodoro, mozzarella, basilico",
+                    prezzo: "7.00",
+                  },
+                  {
+                    nome: "Marinara",
+                    ingredienti: "Pomodoro, aglio, origano, olio evo",
+                    prezzo: "6.00",
+                  },
+                  {
+                    nome: "Diavola",
+                    ingredienti: "Pomodoro, mozzarella, salame piccante",
+                    prezzo: "8.50",
+                  },
+                  {
+                    nome: "Quattro Stagioni",
+                    ingredienti:
+                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
+                    prezzo: "10.00",
+                  },
+                  {
+                    nome: "Capricciosa",
+                    ingredienti:
+                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
+                    prezzo: "9.50",
+                  },
+                  {
+                    nome: "Quattro Formaggi",
+                    ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
+                    prezzo: "9.00",
+                  },
+                ].map((pizza) => (
+                  <div
+                    key={pizza.nome}
+                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                  >
+                                       {" "}
+                    <div className="flex justify-between items-start mb-2">
+                                           {" "}
+                      <h4 className="text-xl font-bold text-black-800">
+                        {pizza.nome}
+                      </h4>
+                                           {" "}
+                      <span className="text-2xl font-bold text-red-600">
+                        €{pizza.prezzo}
+                      </span>
+                                         {" "}
+                    </div>
+                                       {" "}
+                    <p className="text-gray-600">{pizza.ingredienti}</p>       
+                             {" "}
+                  </div>
+                ))}
+                             {" "}
+              </div>
+            )}
+               {/* Bottone Pizze Classiche con toggle */}           {" "}
+            <button
+              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
+              onClick={() => toggleSezioneMenu("dessert")}
+              aria-expanded={sezioniMenuAperte.dessert}
+            >
+                           {" "}
+              <img
+                src="/cheese-cake.png"
+                alt=""
+                className="w-8 h-8 mr-2 invert color-white"
+              />
+              dessert              {" "}
+              <span>{sezioniMenuAperte.dessert ? "▲" : "▼"}</span>           {" "}
+            </button>
+                       {" "}
+            {sezioniMenuAperte.dessert && (
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                               {" "}
+                {[
+                  {
+                    nome: "Margherita",
+                    ingredienti: "Pomodoro, mozzarella, basilico",
+                    prezzo: "7.00",
+                  },
+                  {
+                    nome: "Marinara",
+                    ingredienti: "Pomodoro, aglio, origano, olio evo",
+                    prezzo: "6.00",
+                  },
+                  {
+                    nome: "Diavola",
+                    ingredienti: "Pomodoro, mozzarella, salame piccante",
+                    prezzo: "8.50",
+                  },
+                  {
+                    nome: "Quattro Stagioni",
+                    ingredienti:
+                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
+                    prezzo: "10.00",
+                  },
+                  {
+                    nome: "Capricciosa",
+                    ingredienti:
+                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
+                    prezzo: "9.50",
+                  },
+                  {
+                    nome: "Quattro Formaggi",
+                    ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
+                    prezzo: "9.00",
+                  },
+                ].map((pizza) => (
+                  <div
+                    key={pizza.nome}
+                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                  >
+                                       {" "}
+                    <div className="flex justify-between items-start mb-2">
+                                           {" "}
+                      <h4 className="text-xl font-bold text-black-800">
+                        {pizza.nome}
+                      </h4>
+                                           {" "}
+                      <span className="text-2xl font-bold text-red-600">
+                        €{pizza.prezzo}
+                      </span>
+                                         {" "}
+                    </div>
+                                       {" "}
+                    <p className="text-gray-600">{pizza.ingredienti}</p>       
+                             {" "}
+                  </div>
+                ))}
+                             {" "}
+              </div>
+            )}
+                     {" "}
+          </div>
+        )}
         {/* SEZIONE CONTATTI */}
-
         {sezioneAttiva === "contatti" && (
           <div className="max-w-6xl mx-auto px-4 py-16">
             <h2 className="text-5xl font-bold text-black-800 text-center mb-12">
@@ -672,37 +1166,35 @@ function App() {
                 </form>
               </div>
               {/* Call to Action Centrale */}
-    <div className="mt-16 text-center bg-gradient-to-r from-black to-black p-12 rounded-3xl shadow-2xl">
-      <h4 className="text-3xl font-bold text-white mb-4">
-        Organizziamo il Tuo Evento Perfetto
-      </h4>
-      <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-        Contattaci per un preventivo personalizzato. Ci occupiamo di ogni dettaglio 
-        per rendere il tuo evento indimenticabile.
-      </p>
-      <div className="flex flex-wrap justify-center gap-4">
+              <div className="mt-16 text-center bg-gradient-to-r from-black to-black p-12 rounded-3xl shadow-2xl">
+                <h4 className="text-3xl font-bold text-white mb-4">
+                  Organizziamo il Tuo Evento Perfetto
+                </h4>
+                <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
+                  Contattaci per un preventivo personalizzato. Ci occupiamo di
+                  ogni dettaglio per rendere il tuo evento indimenticabile.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <a
+                    href="tel:+393481234567"
+                    className="bg-white hover:bg-gray-100 text-red-600 px-8 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg"
+                  >
+                    📞 Chiama Ora
+                  </a>
 
-         <a
-          href="tel:+393481234567"
-          className="bg-white hover:bg-gray-100 text-red-600 px-8 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg"
-        >
-          📞 Chiama Ora
-        </a>
-
-        <a
-          href="https://wa.me/393481234567?text=Ciao!%20Vorrei%20informazioni%20per%20un%20evento"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg"
-        >
-          💬 WhatsApp
-        </a>
-      </div>
-    </div>
+                  <a
+                    href="https://wa.me/393481234567?text=Ciao!%20Vorrei%20informazioni%20per%20un%20evento"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-lg"
+                  >
+                    💬 WhatsApp
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         )}
-
         {/* SEZIONE SOCIAL */}
         {sezioneAttiva === "social" && (
           <div className="max-w-4xl mx-auto px-4 py-16 text-center">
