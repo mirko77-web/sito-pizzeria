@@ -173,6 +173,7 @@ function App() {
                   Prenota un Tavolo
                 </button>
               </div>
+              
             </div>
 
             {/* Presentazione Testuale */}
@@ -258,9 +259,67 @@ function App() {
               <div className="grid md:grid-cols-2 gap-12"></div>
             </div>
 
-            
             {/* Sezione Sale - Layout a Scala */}
             <div className="max-w-7xl mx-auto px-4 py-16">
+              {/* Video Hero Introduttivo */}
+              <div className="relative mb-24">
+                {/* Container Video */}
+                <div className="max-w-6xl mx-auto px-4">
+                  <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                    {/* Video */}
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-[500px] object-cover"
+                    >
+                      <source src="/pasta.mp4" type="video/mp4" />
+                    </video>
+
+                    {/* Overlay gradiente animato */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+
+                    {/* Contenuto sopra il video */}
+                    <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-16">
+                      {/* Badge */}
+                      <div className="inline-block bg-black text-white px-6 py-2 rounded-full font-bold mb-4 w-fit">
+                        ✨ Il nostro ristorante
+                      </div>
+
+                      {/* Titolo principale */}
+                      <h3 className="text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-2xl">
+                        Dove Ogni Momento
+                        <br />
+                        Diventa Speciale
+                      </h3>
+
+                      {/* Descrizione */}
+                      <p className="text-xl lg:text-2xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
+                        Tre ambienti unici pensati per accogliere i tuoi momenti
+                        più importanti. Dal pranzo alla  cena al grande evento.
+                      </p>
+
+                      {/* Bottoni CTA */}
+                      <div className="flex flex-wrap gap-4">
+                        
+                        <button className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white px-8 py-4 rounded-xl font-bold text-lg transition">
+                          Prenota Ora
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Decorazione angoli */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-600/20 to-transparent rounded-bl-full"></div>
+                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-red-600/20 to-transparent rounded-tr-full"></div>
+                  </div>
+                </div>
+
+                {/* Linea decorativa sotto */}
+                <div className="max-w-6xl mx-auto px-4 mt-8">
+                  <div className="h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
+                </div>
+              </div>
               <div className="space-y-32">
                 {/* Card 1 - Sala Principale (Immagine Sinistra, Testo Destra) */}
                 <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -400,10 +459,10 @@ function App() {
                     </div>
 
                     <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                      Un'oasi verde all'aperto perfetta per le serate estive. Il
-                      nostro giardino offre un ampio spazio
-                      ideale per feste, battesimi, comunioni e cene sotto le
-                      stelle in un'atmosfera magica.
+                      Una sala all'aperto perfetta per le serate estive. Il
+                      nostro giardino offre un ampio spazio ideale per feste,
+                      battesimi, comunioni e cene sotto le stelle in
+                      un'atmosfera magica.
                     </p>
 
                     {/* Caratteristiche */}
@@ -419,7 +478,6 @@ function App() {
                           </span>
                         </div>
                       </div>
-
                       <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
                         <span className="text-4xl">💡</span>
                         <div>
@@ -429,22 +487,21 @@ function App() {
                           <span className="text-gray-400">Scenografica</span>
                         </div>
                       </div>
-
-                   */   <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
+                      */{" "}
+                      <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl">
                         <span className="text-4xl">👶</span>
                         <div>
-                          <span className="font-bold text-white text-xl block">
-                            
-                          </span>
+                          <span className="font-bold text-white text-xl block"></span>
                           <span className="text-gray-400"></span>
                         </div>
-                      </div> */
+                      </div>{" "}
+                      */
                     </div>
 
                     {/* Badge benefici */}
                     <div className="flex flex-wrap gap-3 mb-8">
                       <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        ✓ Spazio 200 mq
+                        ✓ Spazio 70 mq
                       </span>
                       <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         ✓ Zona coperta
