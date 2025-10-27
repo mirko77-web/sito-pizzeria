@@ -1267,9 +1267,9 @@ function App() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" text-black p-8 rounded-lg shadow-lg transition transform hover:scale-105"
+                className=" text-white p-8 rounded-lg shadow-lg transition transform hover:scale-105"
               >
-                <div className="text-6xl mb-4">
+                <div className="text-6xl mb-4 invert">
                   <img src="public/facebook.png" alt="" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">facebook</h3>
@@ -1281,9 +1281,9 @@ function App() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-br  text-black p-8 rounded-lg shadow-lg transition transform hover:scale-105"
+                className="bg-gradient-to-br  text-white p-8 rounded-lg shadow-lg transition transform hover:scale-105"
               >
-                <div className="text-6xl mb-4">
+                <div className="text-6xl mb-4 invert">
                   <img src="/instagram-circle.png" alt="" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Instagram</h3>
@@ -1295,9 +1295,9 @@ function App() {
                 href="https://tripadvisor.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" text-black p-8 rounded-lg shadow-lg transition transform hover:scale-105"
+                className=" text-white p-8 rounded-lg shadow-lg transition transform hover:scale-105"
               >
-                <div className="text-6xl mb-4">
+                <div className="text-6xl mb-4 invert">
                   <img src="/tripadvisor.png" alt="" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">TripAdvisor</h3>
