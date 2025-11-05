@@ -4,7 +4,12 @@ function App() {
   const [sezioneAttiva, setSezioneAttiva] = useState("home");
   const [sezioniMenuAperte, setSezioniMenuAperte] = useState({
     pizzeClassiche: false,
-    pizzeSpeciali: false,
+    pizzeSpeciali: false, 
+    primiPiatti: false,
+    secondiPiatti: false,
+    bevande: false,
+    dessert: false
+
   });
 
   const toggleSezioneMenu = (sezione) => {
@@ -622,473 +627,356 @@ function App() {
             </div>
           </div>
         )}
-        {/* SEZIONE MENU */}       {" "}
-        {sezioneAttiva === "menu" && (
-          <div className="max-w-6xl mx-auto px-4 py-16">
-                       {" "}
-            <h2 className="text-5xl font-bold text-black-800 text-center mb-12">
-              Il Nostro Menu
-            </h2>
-                        {/* Bottone Pizze Classiche con toggle */}           {" "}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("pizzeClassiche")}
-              aria-expanded={sezioniMenuAperte.pizzeClassiche}
-            >
-                           {" "}
-              <img
-                src="/pizza-slice.png"
-                alt=""
-                className="w-8 h-8 mr-2 invert color-white"
-              />
-              Pizze Classiche              {" "}
-              <span>{sezioniMenuAperte.pizzeClassiche ? "▲" : "▼"}</span>       
-                 {" "}
-            </button>
-                       {" "}
-            {sezioniMenuAperte.pizzeClassiche && (
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                               {" "}
-                {[
-                  {
-                    nome: "Margherita",
-                    ingredienti: "Pomodoro, mozzarella, basilico",
-                    prezzo: "7.00",
-                  },
-                  {
-                    nome: "Marinara",
-                    ingredienti: "Pomodoro, aglio, origano, olio evo",
-                    prezzo: "6.00",
-                  },
-                  {
-                    nome: "Diavola",
-                    ingredienti: "Pomodoro, mozzarella, salame piccante",
-                    prezzo: "8.50",
-                  },
-                  {
-                    nome: "Quattro Stagioni",
-                    ingredienti:
-                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
-                    prezzo: "10.00",
-                  },
-                  {
-                    nome: "Capricciosa",
-                    ingredienti:
-                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
-                    prezzo: "9.50",
-                  },
-                  {
-                    nome: "Quattro Formaggi",
-                    ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
-                    prezzo: "9.00",
-                  },
-                ].map((pizza) => (
-                  <div
-                    key={pizza.nome}
-                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
-                  >
-                                       {" "}
-                    <div className="flex justify-between items-start mb-2">
-                                           {" "}
-                      <h4 className="text-xl font-bold text-black-800">
-                        {pizza.nome}
-                      </h4>
-                                           {" "}
-                      <span className="text-2xl font-bold text-red-600">
-                        €{pizza.prezzo}
-                      </span>
-                                         {" "}
-                    </div>
-                                       {" "}
-                    <p className="text-gray-600">{pizza.ingredienti}</p>       
-                             {" "}
+         <div className="min-h-screen bg-gradient-to-br from-amber-50 to-red-50">
+      {sezioneAttiva === "menu" && (
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <h2 className="text-5xl font-bold text-black-800 text-center mb-12">
+            Il Nostro Menu
+          </h2>
+
+          {/* PIZZE CLASSICHE */}
+          <button
+            className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+            onClick={() => toggleSezioneMenu("pizzeClassiche")}
+            aria-expanded={sezioniMenuAperte.pizzeClassiche}
+          >
+            <div className="flex items-center">
+              <img src="pizza-slice.png" className="w-10 h-10 invert mr-4 " alt="pizza" />
+              <span>Pizze Classiche</span>
+            </div>
+            <span>{sezioniMenuAperte.pizzeClassiche ? "▲" : "▼"}</span>
+          </button>
+
+          {sezioniMenuAperte.pizzeClassiche && (
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {[
+                {
+                  nome: "Margherita",
+                  ingredienti: "Pomodoro, mozzarella, basilico",
+                  prezzo: "7.00",
+                },
+                {
+                  nome: "Marinara",
+                  ingredienti: "Pomodoro, aglio, origano, olio evo",
+                  prezzo: "6.00",
+                },
+                {
+                  nome: "Diavola",
+                  ingredienti: "Pomodoro, mozzarella, salame piccante",
+                  prezzo: "8.50",
+                },
+                {
+                  nome: "Quattro Stagioni",
+                  ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
+                  prezzo: "10.00",
+                },
+                {
+                  nome: "Capricciosa",
+                  ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
+                  prezzo: "9.50",
+                },
+                {
+                  nome: "Quattro Formaggi",
+                  ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
+                  prezzo: "9.00",
+                },
+              ].map((pizza) => (
+                <div
+                  key={pizza.nome}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="text-xl font-bold text-black-800">
+                      {pizza.nome}
+                    </h4>
+                    <span className="text-2xl font-bold text-red-600">
+                      €{pizza.prezzo}
+                    </span>
                   </div>
-                ))}
-                             {" "}
-              </div>
-            )}
-                        {/* Bottone Pizze Speciali con toggle */}               
-                     {" "}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("pizzeClassiche")}
-              aria-expanded={sezioniMenuAperte.pizzeClassiche}
-            >
-                           {" "}
-              <img
-                src="/pizza-whole-slice.png"
-                alt=""
-                className="w-8 h-8 mr-2 invert color-white"
-              />
-              Pizze speciali              {" "}
-              <span>{sezioniMenuAperte.pizzeClassiche ? "▲" : "▼"}</span>       
-                 {" "}
-            </button>
-                       {" "}
-            {sezioniMenuAperte.pizzeSpeciali && (
-              <div className="grid md:grid-cols-2 gap-6">
-                               {" "}
-                {[
-                  {
-                    nome: "La Perla",
-                    ingredienti:
-                      "Pomodoro, bufala, pachino, rucola, scaglie di parmigiano",
-                    prezzo: "12.00",
-                  },
-                  {
-                    nome: "Salsiccia e Friarielli",
-                    ingredienti: "Mozzarella, salsiccia napoletana, friarielli",
-                    prezzo: "11.00",
-                  },
-                  {
-                    nome: "Tartufata",
-                    ingredienti: "Mozzarella, funghi porcini, crema di tartufo",
-                    prezzo: "13.50",
-                  },
-                  {
-                    nome: "Burrata e Crudo",
-                    ingredienti:
-                      "Pomodoro, burrata, prosciutto crudo di Parma, rucola",
-                    prezzo: "14.00",
-                  },
-                ].map((pizza) => (
-                  <div
-                    key={pizza.nome}
-                    className="bg-gradient-to-br from-red-50 to-amber-50 p-6 rounded-lg shadow-md hover:shadow-xl transition border-2 border-red-200"
-                  >
-                                       {" "}
-                    <div className="flex justify-between items-start mb-2">
-                                           {" "}
-                      <h4 className="text-xl font-bold text-black-800">
-                        {pizza.nome}
-                      </h4>
-                                           {" "}
-                      <span className="text-2xl font-bold text-red-600">
-                        €{pizza.prezzo}
-                      </span>
-                                         {" "}
-                    </div>
-                                       {" "}
-                    <p className="text-gray-600">{pizza.ingredienti}</p>       
-                             {" "}
+                  <p className="text-gray-600">{pizza.ingredienti}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* PIZZE SPECIALI */}
+          <button
+            className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+            onClick={() => toggleSezioneMenu("pizzeSpeciali")}
+            aria-expanded={sezioniMenuAperte.pizzeSpeciali}
+          >
+            <div className="flex items-center">
+            <img src="pizza-whole-slice.png" className="w-10 h-10 invert mr-4 " alt="pizza" />
+              <span>Pizze Speciali</span>
+            </div>
+            <span>{sezioniMenuAperte.pizzeSpeciali ? "▲" : "▼"}</span>
+          </button>
+
+          {sezioniMenuAperte.pizzeSpeciali && (
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {[
+                {
+                  nome: "La Perla",
+                  ingredienti: "Pomodoro, bufala, pachino, rucola, scaglie di parmigiano",
+                  prezzo: "12.00",
+                },
+                {
+                  nome: "Salsiccia e Friarielli",
+                  ingredienti: "Mozzarella, salsiccia napoletana, friarielli",
+                  prezzo: "11.00",
+                },
+                {
+                  nome: "Tartufata",
+                  ingredienti: "Mozzarella, funghi porcini, crema di tartufo",
+                  prezzo: "13.50",
+                },
+                {
+                  nome: "Burrata e Crudo",
+                  ingredienti: "Pomodoro, burrata, prosciutto crudo di Parma, rucola",
+                  prezzo: "14.00",
+                },
+              ].map((pizza) => (
+                <div
+                  key={pizza.nome}
+                  className="bg-gradient-to-br from-red-50 to-amber-50 p-6 rounded-lg shadow-md hover:shadow-xl transition border-2 border-red-200"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="text-xl font-bold text-black-800">
+                      {pizza.nome}
+                    </h4>
+                    <span className="text-2xl font-bold text-red-600">
+                      €{pizza.prezzo}
+                    </span>
                   </div>
-                ))}
-                             {" "}
-              </div>
-            )}
-                           {/* Bottone Pizze Classiche con toggle */}           {" "}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("primiPiatti")}
-              aria-expanded={sezioniMenuAperte.primiPiatti}
-            >
-                           {" "}
-              <img
-                src="/fork-spaghetti.png"
-                alt=""
-                className="w-8 h-8 mr-2 invert color-white"
-              />
-              Primi Piatti              {" "}
-              <span>{sezioniMenuAperte.primiPiatti ? "▲" : "▼"}</span>         
-               {" "}
-            </button>
-                       {" "}
-            {sezioniMenuAperte.primiPiatti && (
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                               {" "}
-                {[
-                  {
-                    nome: "Margherita",
-                    ingredienti: "Pomodoro, mozzarella, basilico",
-                    prezzo: "7.00",
-                  },
-                  {
-                    nome: "Marinara",
-                    ingredienti: "Pomodoro, aglio, origano, olio evo",
-                    prezzo: "6.00",
-                  },
-                  {
-                    nome: "Diavola",
-                    ingredienti: "Pomodoro, mozzarella, salame piccante",
-                    prezzo: "8.50",
-                  },
-                  {
-                    nome: "Quattro Stagioni",
-                    ingredienti:
-                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
-                    prezzo: "10.00",
-                  },
-                  {
-                    nome: "Capricciosa",
-                    ingredienti:
-                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
-                    prezzo: "9.50",
-                  },
-                  {
-                    nome: "Quattro Formaggi",
-                    ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
-                    prezzo: "9.00",
-                  },
-                ].map((pizza) => (
-                  <div
-                    key={pizza.nome}
-                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
-                  >
-                                       {" "}
-                    <div className="flex justify-between items-start mb-2">
-                                           {" "}
-                      <h4 className="text-xl font-bold text-black-800">
-                        {pizza.nome}
-                      </h4>
-                                           {" "}
-                      <span className="text-2xl font-bold text-red-600">
-                        €{pizza.prezzo}
-                      </span>
-                                         {" "}
-                    </div>
-                                       {" "}
-                    <p className="text-gray-600">{pizza.ingredienti}</p>       
-                             {" "}
+                  <p className="text-gray-600">{pizza.ingredienti}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* PRIMI PIATTI */}
+          <button
+            className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+            onClick={() => toggleSezioneMenu("primiPiatti")}
+            aria-expanded={sezioniMenuAperte.primiPiatti}
+          >
+            <div className="flex items-center">
+              <img src="fork-spaghetti.png" className="w-10 h-10 invert mr-4 " alt="primi piatti " />
+              <span>Primi Piatti</span>
+            </div>
+            <span>{sezioniMenuAperte.primiPiatti ? "▲" : "▼"}</span>
+          </button>
+
+          {sezioniMenuAperte.primiPiatti && (
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {[
+                {
+                  nome: "Spaghetti alla Carbonara",
+                  ingredienti: "Guanciale, uova, pecorino, pepe nero",
+                  prezzo: "10.00",
+                },
+                {
+                  nome: "Pasta all'Amatriciana",
+                  ingredienti: "Guanciale, pomodoro, pecorino, peperoncino",
+                  prezzo: "9.50",
+                },
+                {
+                  nome: "Risotto ai Funghi Porcini",
+                  ingredienti: "Riso carnaroli, funghi porcini, parmigiano, burro",
+                  prezzo: "12.00",
+                },
+                {
+                  nome: "Tagliatelle al Ragù",
+                  ingredienti: "Pasta fresca, ragù di carne, parmigiano",
+                  prezzo: "11.00",
+                },
+              ].map((piatto) => (
+                <div
+                  key={piatto.nome}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="text-xl font-bold text-black-800">
+                      {piatto.nome}
+                    </h4>
+                    <span className="text-2xl font-bold text-red-600">
+                      €{piatto.prezzo}
+                    </span>
                   </div>
-                ))}
-                             {" "}
-              </div>
-            )}
-                           {/* Bottone Pizze Classiche con toggle */}           {" "}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("secondiPiatti")}
-              aria-expanded={sezioniMenuAperte.secondiPiatti}
-            >
-                           {" "}
-              <img
-                src="/steak.png"
-                alt=""
-                className="w-8 h-8 mr-2 invert color-white"
-              />{" "}
-              Secondi Piatti              {" "}
-              <span>{sezioniMenuAperte.secondiPiatti ? "▲" : "▼"}</span>       
-                 {" "}
-            </button>
-                       {" "}
-            {sezioniMenuAperte.secondiPiatti && (
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                               {" "}
-                {[
-                  {
-                    nome: "Margherita",
-                    ingredienti: "Pomodoro, mozzarella, basilico",
-                    prezzo: "7.00",
-                  },
-                  {
-                    nome: "Marinara",
-                    ingredienti: "Pomodoro, aglio, origano, olio evo",
-                    prezzo: "6.00",
-                  },
-                  {
-                    nome: "Diavola",
-                    ingredienti: "Pomodoro, mozzarella, salame piccante",
-                    prezzo: "8.50",
-                  },
-                  {
-                    nome: "Quattro Stagioni",
-                    ingredienti:
-                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
-                    prezzo: "10.00",
-                  },
-                  {
-                    nome: "Capricciosa",
-                    ingredienti:
-                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
-                    prezzo: "9.50",
-                  },
-                  {
-                    nome: "Quattro Formaggi",
-                    ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
-                    prezzo: "9.00",
-                  },
-                ].map((pizza) => (
-                  <div
-                    key={pizza.nome}
-                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
-                  >
-                                       {" "}
-                    <div className="flex justify-between items-start mb-2">
-                                           {" "}
-                      <h4 className="text-xl font-bold text-black-800">
-                        {pizza.nome}
-                      </h4>
-                                           {" "}
-                      <span className="text-2xl font-bold text-red-600">
-                        €{pizza.prezzo}
-                      </span>
-                                         {" "}
-                    </div>
-                                       {" "}
-                    <p className="text-gray-600">{pizza.ingredienti}</p>       
-                             {" "}
+                  <p className="text-gray-600">{piatto.ingredienti}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* SECONDI PIATTI */}
+          <button
+            className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+            onClick={() => toggleSezioneMenu("secondiPiatti")}
+            aria-expanded={sezioniMenuAperte.secondiPiatti}
+          >
+            <div className="flex items-center">
+              <img src="steak.png" className="w-10 h-10 invert mr-4 " alt="secondi piatti " />
+              <span>Secondi Piatti</span>
+            </div>
+            <span>{sezioniMenuAperte.secondiPiatti ? "▲" : "▼"}</span>
+          </button>
+
+          {sezioniMenuAperte.secondiPiatti && (
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {[
+                {
+                  nome: "Tagliata di Manzo",
+                  ingredienti: "Manzo, rucola, pomodorini, scaglie di grana",
+                  prezzo: "16.00",
+                },
+                {
+                  nome: "Grigliata Mista di Carne",
+                  ingredienti: "Salsiccia, costine, bistecca, patate al forno",
+                  prezzo: "18.00",
+                },
+                {
+                  nome: "Filetto di Branzino",
+                  ingredienti: "Branzino, verdure grigliate, limone",
+                  prezzo: "15.00",
+                },
+                {
+                  nome: "Cotoletta alla Milanese",
+                  ingredienti: "Vitello impanato, patate fritte, limone",
+                  prezzo: "14.00",
+                },
+              ].map((piatto) => (
+                <div
+                  key={piatto.nome}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="text-xl font-bold text-black-800">
+                      {piatto.nome}
+                    </h4>
+                    <span className="text-2xl font-bold text-red-600">
+                      €{piatto.prezzo}
+                    </span>
                   </div>
-                ))}
-                             {" "}
-              </div>
-            )}
-               {/* Bottone Pizze Classiche con toggle */}           {" "}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("bevande")}
-              aria-expanded={sezioniMenuAperte.bevande}
-            >
-                           {" "}
-              <img
-                src="/glass-cheers.png"
-                alt=""
-                className="w-8 h-8 mr-2 invert color-white"
-              />
-              bevande              {" "}
-              <span>{sezioniMenuAperte.bevande ? "▲" : "▼"}</span>           {" "}
-            </button>
-                       {" "}
-            {sezioniMenuAperte.bevande && (
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                               {" "}
-                {[
-                  {
-                    nome: "Margherita",
-                    ingredienti: "Pomodoro, mozzarella, basilico",
-                    prezzo: "7.00",
-                  },
-                  {
-                    nome: "Marinara",
-                    ingredienti: "Pomodoro, aglio, origano, olio evo",
-                    prezzo: "6.00",
-                  },
-                  {
-                    nome: "Diavola",
-                    ingredienti: "Pomodoro, mozzarella, salame piccante",
-                    prezzo: "8.50",
-                  },
-                  {
-                    nome: "Quattro Stagioni",
-                    ingredienti:
-                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
-                    prezzo: "10.00",
-                  },
-                  {
-                    nome: "Capricciosa",
-                    ingredienti:
-                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
-                    prezzo: "9.50",
-                  },
-                  {
-                    nome: "Quattro Formaggi",
-                    ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
-                    prezzo: "9.00",
-                  },
-                ].map((pizza) => (
-                  <div
-                    key={pizza.nome}
-                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
-                  >
-                                       {" "}
-                    <div className="flex justify-between items-start mb-2">
-                                           {" "}
-                      <h4 className="text-xl font-bold text-black-800">
-                        {pizza.nome}
-                      </h4>
-                                           {" "}
-                      <span className="text-2xl font-bold text-red-600">
-                        €{pizza.prezzo}
-                      </span>
-                                         {" "}
-                    </div>
-                                       {" "}
-                    <p className="text-gray-600">{pizza.ingredienti}</p>       
-                             {" "}
+                  <p className="text-gray-600">{piatto.ingredienti}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* BEVANDE */}
+          <button
+            className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+            onClick={() => toggleSezioneMenu("bevande")}
+            aria-expanded={sezioniMenuAperte.bevande}
+          >
+            <div className="flex items-center">
+              <img src="wine-glass-crack.png" className="w-10 h-10 invert mr-4 " alt="bevande" />
+              <span>Bevande</span>
+            </div>
+            <span>{sezioniMenuAperte.bevande ? "▲" : "▼"}</span>
+          </button>
+
+          {sezioniMenuAperte.bevande && (
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {[
+                {
+                  nome: "Acqua Naturale",
+                  ingredienti: "Bottiglia 1L",
+                  prezzo: "2.00",
+                },
+                {
+                  nome: "Coca Cola",
+                  ingredienti: "Lattina 33cl",
+                  prezzo: "3.00",
+                },
+                {
+                  nome: "Birra alla Spina",
+                  ingredienti: "Media 40cl",
+                  prezzo: "4.50",
+                },
+                {
+                  nome: "Vino della Casa",
+                  ingredienti: "Rosso o Bianco, calice",
+                  prezzo: "4.00",
+                },
+              ].map((bevanda) => (
+                <div
+                  key={bevanda.nome}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="text-xl font-bold text-black-800">
+                      {bevanda.nome}
+                    </h4>
+                    <span className="text-2xl font-bold text-red-600">
+                      €{bevanda.prezzo}
+                    </span>
                   </div>
-                ))}
-                             {" "}
-              </div>
-            )}
-               {/* Bottone Pizze Classiche con toggle */}           {" "}
-            <button
-              className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4"
-              onClick={() => toggleSezioneMenu("dessert")}
-              aria-expanded={sezioniMenuAperte.dessert}
-            >
-                           {" "}
-              <img
-                src="/cheese-cake.png"
-                alt=""
-                className="w-8 h-8 mr-2 invert color-white"
-              />
-              dessert              {" "}
-              <span>{sezioniMenuAperte.dessert ? "▲" : "▼"}</span>           {" "}
-            </button>
-                       {" "}
-            {sezioniMenuAperte.dessert && (
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                               {" "}
-                {[
-                  {
-                    nome: "Margherita",
-                    ingredienti: "Pomodoro, mozzarella, basilico",
-                    prezzo: "7.00",
-                  },
-                  {
-                    nome: "Marinara",
-                    ingredienti: "Pomodoro, aglio, origano, olio evo",
-                    prezzo: "6.00",
-                  },
-                  {
-                    nome: "Diavola",
-                    ingredienti: "Pomodoro, mozzarella, salame piccante",
-                    prezzo: "8.50",
-                  },
-                  {
-                    nome: "Quattro Stagioni",
-                    ingredienti:
-                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive",
-                    prezzo: "10.00",
-                  },
-                  {
-                    nome: "Capricciosa",
-                    ingredienti:
-                      "Pomodoro, mozzarella, prosciutto, funghi, carciofi",
-                    prezzo: "9.50",
-                  },
-                  {
-                    nome: "Quattro Formaggi",
-                    ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano",
-                    prezzo: "9.00",
-                  },
-                ].map((pizza) => (
-                  <div
-                    key={pizza.nome}
-                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
-                  >
-                                       {" "}
-                    <div className="flex justify-between items-start mb-2">
-                                           {" "}
-                      <h4 className="text-xl font-bold text-black-800">
-                        {pizza.nome}
-                      </h4>
-                                           {" "}
-                      <span className="text-2xl font-bold text-red-600">
-                        €{pizza.prezzo}
-                      </span>
-                                         {" "}
-                    </div>
-                                       {" "}
-                    <p className="text-gray-600">{pizza.ingredienti}</p>       
-                             {" "}
+                  <p className="text-gray-600">{bevanda.ingredienti}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* DESSERT */}
+          <button
+            className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+            onClick={() => toggleSezioneMenu("dessert")}
+            aria-expanded={sezioniMenuAperte.dessert}
+          >
+            <div className="flex items-center">
+              <img src="cheese-cake.png" className="w-10 h-10 invert mr-4 " alt="dessert" />
+              <span>Dessert</span>
+            </div>
+            <span>{sezioniMenuAperte.dessert ? "▲" : "▼"}</span>
+          </button>
+
+          {sezioniMenuAperte.dessert && (
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {[
+                {
+                  nome: "Tiramisù",
+                  ingredienti: "Savoiardi, mascarpone, caffè, cacao",
+                  prezzo: "6.00",
+                },
+                {
+                  nome: "Panna Cotta",
+                  ingredienti: "Panna cotta con frutti di bosco",
+                  prezzo: "5.50",
+                },
+                {
+                  nome: "Cheesecake",
+                  ingredienti: "New York style con coulis di frutti rossi",
+                  prezzo: "6.50",
+                },
+                {
+                  nome: "Profiteroles",
+                  ingredienti: "Bignè con crema e cioccolato",
+                  prezzo: "6.00",
+                },
+              ].map((dolce) => (
+                <div
+                  key={dolce.nome}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="text-xl font-bold text-black-800">
+                      {dolce.nome}
+                    </h4>
+                    <span className="text-2xl font-bold text-red-600">
+                      €{dolce.prezzo}
+                    </span>
                   </div>
-                ))}
-                             {" "}
-              </div>
-            )}
-                     {" "}
-          </div>
-        )}
+                  <p className="text-gray-600">{dolce.ingredienti}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  
         {/* SEZIONE CONTATTI */}
         {sezioneAttiva === "contatti" && (
           <div className="max-w-6xl mx-auto px-4 py-16">
