@@ -58,7 +58,7 @@ function App() {
       data: "14 Febbraio 2026",
       ora: "19:00 - 00:00",
       descrizione: "Menu speciale per coppie. Prenota il tuo tavolo e goditi la serata con musica dal vivo.",
-      img: "/san vale.png",
+      img: "/sanvale.png.png",
     },
     
     {
@@ -67,7 +67,7 @@ function App() {
       data: "8 marzo 2026",
       ora: "21:00 - 23:30",
       descrizione: "Musica dal vivo . Ambiente magico per una serata indimenticabile!",
-      img: "/donna pizzeria.jpg",
+      img: "/donnapizzeria.jpg",
     },
    
     {
@@ -197,7 +197,7 @@ function App() {
                   }`}
                 >
                   <img
-                    src="public/party_2982898.png"
+                    src="/party_2982898.png"
                     alt="Eventi"
                     className={`w-8 h-8 transition ${
                       sezioneAttiva === "eventi" ? "" : "brightness-0 invert"
@@ -248,7 +248,7 @@ function App() {
               </video>
               <div className="absolute inset-0 bg-black bg-opacity-50"></div>
               <div className="relative h-full flex flex-col justify-center items-center text-center text-white px-4">
-                <img src="public/laperla.png" alt="logo perla" className="" />
+                <img src="/laperla.png" alt="logo perla" className="" />
                 {/* ✅ BOTTONE FUNZIONANTE - Prenota un Tavolo (Hero) */}
                 <button
                   onClick={() => apriWhatsApp("Ciao! Vorrei prenotare un tavolo alla Pizzeria La Perla. Potete aiutarmi?")}
@@ -350,7 +350,7 @@ function App() {
                   <div className="w-full lg:w-1/2 transform lg:-translate-y-12">
                     <div className="relative group overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
                       <img
-                        src="public/sala perla 2.jpeg"
+                        src="/sala perla 2.jpeg"
                         alt="Sala Principale"
                         className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-700"
                       />
@@ -470,7 +470,7 @@ function App() {
                   <div className="w-full lg:w-1/2 transform lg:-translate-y-12">
                     <div className="relative group overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500">
                       <img
-                        src="public/sala perla 1.jpeg"
+                        src="/sala perla 1.jpeg"
                         alt="Sala Eventi"
                         className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-700"
                       />
@@ -1064,17 +1064,17 @@ function App() {
               </p>
               <div className="grid md:grid-cols-3 gap-8 mb-16">
                 <a href="https://www.facebook.com/laperlacoffeebeerwine?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="invert text-black p-8 rounded-lg shadow-lg transition transform hover:scale-105">
-                  <div className="text-6xl mb-4"><img src="public/facebook.png" alt="" /></div>
+                  <div className="text-6xl mb-4"><img src="/facebook.png" alt="" /></div>
                   <h3 className="text-2xl font-bold mb-2">Facebook</h3>
                   <p>@laperla_pizzeria</p>
                 </a>
                 <a href="https://www.instagram.com/laperla_avetrana?igsh=MWh3dTl1MHM2ejNkbQ%3D%3D" target="_blank" rel="noopener noreferrer" className="invert text-black p-8 rounded-lg shadow-lg transition transform hover:scale-105">
-                  <div className="text-6xl mb-4"><img src="public/camera.png" alt="" /></div>
+                  <div className="text-6xl mb-4"><img src="/camera.png" alt="" /></div>
                   <h3 className="text-3xl font-bold mb-2">Instagram</h3>
                   <p>@laperla_pizzeria</p>
                 </a>
                 <a href="https://www.google.com/search?q=la+perla+avetrana" target="_blank" rel="noopener noreferrer" className="invert text-black p-8 rounded-lg shadow-lg transition transform hover:scale-105">
-                  <div className="text-6xl mb-4"><img src="public/google-logo.jpg" alt="" /></div>
+                  <div className="text-6xl mb-4"><img src="/google-logo.jpg" alt="" /></div>
                   <h3 className="text-2xl font-bold mb-2">Google</h3>
                   <p>@laperla_avetrana</p>
                 </a>
