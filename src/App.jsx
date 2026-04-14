@@ -533,134 +533,250 @@ function App() {
           </div>
         )}
 
-        {/* SEZIONE MENU */}
-        {sezioneAttiva === "menu" && (
-          <div className="min-h-screen bg-gradient-to-br from-amber-50 to-red-50">
-            <div className="max-w-6xl mx-auto px-4 py-16">
-              <h2 className="text-5xl font-bold text-gray-900 text-center mb-12">Il Nostro Menu</h2>
+       {/* SEZIONE MENU */}
+{sezioneAttiva === "menu" && (
+  <div className="min-h-screen bg-gradient-to-br from-amber-50 to-red-50">
+    <div className="max-w-6xl mx-auto px-4 py-16">
+      <h2 className="text-5xl font-bold text-gray-900 text-center mb-12">Il Nostro Menu</h2>
 
-              {/* PIZZE CLASSICHE */}
-              <button
-                className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
-                onClick={() => toggleSezioneMenu("pizzeClassiche")}
-              >
-                <div className="flex items-center">
-                  <img src="pizza-slice.png" className="w-10 h-10 invert mr-4" alt="pizza" />
-                  <span>Pizze Classiche</span>
-                </div>
-                <span>{sezioniMenuAperte.pizzeClassiche ? "▲" : "▼"}</span>
-              </button>
-              {sezioniMenuAperte.pizzeClassiche && (
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  {[
-                    { nome: "Margherita", ingredienti: "Pomodoro, mozzarella, basilico", prezzo: "7.00" },
-                    { nome: "Marinara", ingredienti: "Pomodoro, aglio, origano, olio evo", prezzo: "6.00" },
-                    { nome: "Diavola", ingredienti: "Pomodoro, mozzarella, salame piccante", prezzo: "8.50" },
-                    { nome: "Quattro Stagioni", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi, olive", prezzo: "10.00" },
-                    { nome: "Capricciosa", ingredienti: "Pomodoro, mozzarella, prosciutto, funghi, carciofi", prezzo: "9.50" },
-                    { nome: "Quattro Formaggi", ingredienti: "Mozzarella, gorgonzola, fontina, parmigiano", prezzo: "9.00" },
-                  ].map((pizza) => (
-                    <div key={pizza.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-xl font-bold text-black-800">{pizza.nome}</h4>
-                        <span className="text-2xl font-bold text-red-600">€{pizza.prezzo}</span>
-                      </div>
-                      <p className="text-gray-600">{pizza.ingredienti}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
+      {/* ANTIPASTI */}
+      <button
+        className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+        onClick={() => toggleSezioneMenu("antipasti")}
+      >
+        <div className="flex items-center">
+          <img src="/antiopasto.png" className="w-10 h-10 invert mr-4" alt="antipasti" />
+          <span>Antipasti</span>
+        </div>
+        <span>{sezioniMenuAperte.antipasti ? "▲" : "▼"}</span>
+      </button>
+      {sezioniMenuAperte.antipasti && (
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {[
+            { nome: "Antipasto all’Italiana", ingredienti: "prosciutto crudo,mozzarella,saleme dolce,formaggi,melanzane e peperoni sott'olio", prezzo: "10.00" },
+            { nome: "Antipasto della Casa", ingredienti: "mix di prodotti locali a seconda della disponibilità", prezzo: "15.00" },
+            { nome: "Antipasto armonia", ingredienti: "mix di salumii e formaggi,mix di frittini,melanzane,peperoni e funghi sott'olio", prezzo: "13.00" },
+            { nome: "Antipasto di Mare", ingredienti: "insalata di mare,polpette di polpo,alici marinate, chele di granchio", prezzo: "12.00" },
+            { nome: "Antipasto perla", ingredienti: "polpette di carne,capocollo,funghi,burratina,formaggi,friselline casarecce,insalata di mare", prezzo: "14.00" },
+            { nome: "Polpette di Carne", ingredienti: "", prezzo: "5.00" },
+            { nome: "frittini misti", ingredienti: "", prezzo: "9.00" },
+          ].map((item) => (
+            <div key={item.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="text-xl font-bold">{item.nome}</h4>
+                <span className="text-2xl font-bold text-red-600">€{item.prezzo}</span>
+              </div>
+              <p className="text-gray-600">{item.ingredienti}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
-              {/* PIZZE SPECIALI */}
-              <button
-                className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
-                onClick={() => toggleSezioneMenu("pizzeSpeciali")}
-              >
-                <div className="flex items-center">
-                  <img src="pizza-whole-slice.png" className="w-10 h-10 invert mr-4" alt="pizza" />
-                  <span>Pizze Speciali</span>
-                </div>
-                <span>{sezioniMenuAperte.pizzeSpeciali ? "▲" : "▼"}</span>
-              </button>
-              {sezioniMenuAperte.pizzeSpeciali && (
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  {[
-                    { nome: "La Perla", ingredienti: "Pomodoro, bufala, pachino, rucola, scaglie di parmigiano", prezzo: "12.00" },
-                    { nome: "Salsiccia e Friarielli", ingredienti: "Mozzarella, salsiccia napoletana, friarielli", prezzo: "11.00" },
-                    { nome: "Tartufata", ingredienti: "Mozzarella, funghi porcini, crema di tartufo", prezzo: "13.50" },
-                    { nome: "Burrata e Crudo", ingredienti: "Pomodoro, burrata, prosciutto crudo di Parma, rucola", prezzo: "14.00" },
-                  ].map((pizza) => (
-                    <div key={pizza.nome} className="bg-gradient-to-br from-red-50 to-amber-50 p-6 rounded-lg shadow-md hover:shadow-xl transition border-2 border-red-200">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-xl font-bold text-black-800">{pizza.nome}</h4>
-                        <span className="text-2xl font-bold text-red-600">€{pizza.prezzo}</span>
-                      </div>
-                      <p className="text-gray-600">{pizza.ingredienti}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
+      {/* SALENTINE */}
+      <button
+        className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+        onClick={() => toggleSezioneMenu("salentine")}
+      >
+        <div className="flex items-center">
+          <img src="/mandu_8755649.png" className="w-10 h-10 invert mr-4" alt="salentine" />
+          <span>Salentine</span>
+        </div>
+        <span>{sezioniMenuAperte.salentine ? "▲" : "▼"}</span>
+      </button>
+      {sezioniMenuAperte.salentine && (
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {[
+            { nome: "Piadina", ingredienti: "", prezzo: "2.00" },
+            { nome: "Calzone", ingredienti: "pomodoro, mozzarella, prosciutto cotto,funghi", prezzo: "8.50" },
+            { nome: "Puccia della Casa", ingredienti: "Mozzarella, pomodoro, prosciutto cotto,salame dolce o piccante, svizzero,tonno,giardiniera", prezzo: "6.00" },
+            { nome: "Puccia Caprese", ingredienti: "Mozzarella, pomodoro, fior di latte, prosciutto crudo", prezzo: "8.50" },
+            { nome: "Panzerotto Fritto", ingredienti: "Pomodoro, mozzarella, prosciutto cotto", prezzo: "2.50" },
+             { nome: "Panzerotto Fritto", ingredienti: "pomodoro, mozzarella, ventricina e svizzero", prezzo: "3.00" },
+          ].map((item) => (
+            <div key={item.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="text-xl font-bold">{item.nome}</h4>
+                <span className="text-2xl font-bold text-red-600">€{item.prezzo}</span>
+              </div>
+              <p className="text-gray-600">{item.ingredienti}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
-              {/* PRIMI PIATTI */}
-              <button
-                className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
-                onClick={() => toggleSezioneMenu("primiPiatti")}
-              >
-                <div className="flex items-center">
-                  <img src="fork-spaghetti.png" className="w-10 h-10 invert mr-4" alt="primi piatti" />
-                  <span>Primi Piatti</span>
-                </div>
-                <span>{sezioniMenuAperte.primiPiatti ? "▲" : "▼"}</span>
-              </button>
-              {sezioniMenuAperte.primiPiatti && (
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  {[
-                    { nome: "Spaghetti alla Carbonara", ingredienti: "Guanciale, uova, pecorino, pepe nero", prezzo: "10.00" },
-                    { nome: "Pasta all'Amatriciana", ingredienti: "Guanciale, pomodoro, pecorino, peperoncino", prezzo: "9.50" },
-                    { nome: "Risotto ai Funghi Porcini", ingredienti: "Riso carnaroli, funghi porcini, parmigiano, burro", prezzo: "12.00" },
-                    { nome: "Tagliatelle al Ragù", ingredienti: "Pasta fresca, ragù di carne, parmigiano", prezzo: "11.00" },
-                  ].map((piatto) => (
-                    <div key={piatto.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-xl font-bold text-black-800">{piatto.nome}</h4>
-                        <span className="text-2xl font-bold text-red-600">€{piatto.prezzo}</span>
-                      </div>
-                      <p className="text-gray-600">{piatto.ingredienti}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
+      {/* PIZZE CLASSICHE */}
+      <button
+        className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+        onClick={() => toggleSezioneMenu("pizzeClassiche")}
+      >
+        <div className="flex items-center">
+          <img src="pizza-slice.png" className="w-10 h-10 invert mr-4" alt="pizza" />
+          <span>Pizze Classiche</span>
+        </div>
+        <span>{sezioniMenuAperte.pizzeClassiche ? "▲" : "▼"}</span>
+      </button>
+      {sezioniMenuAperte.pizzeClassiche && (
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {[
+            { nome: "Margherita", ingredienti: "Pomodoro, mozzarella, origano", prezzo: "6.00" },
+            { nome: "Napoli", ingredienti: "Pomodoro, mozzarella, acciughe, capperi, olive", prezzo: "7.00" },
+            { nome: "Marinara", ingredienti: "Pomodoro, aglio, origano", prezzo: "3.50" },
+            { nome: "frutti di mare", ingredienti: "Pomodoro, mozzarella, frutti di mare", prezzo: "9.50" },
+            { nome: "caprese", ingredienti: "base piadina,Pomodoro, mozzarella, prosciutto crudo, rucola", prezzo: "8.50" },
+            { nome: "Capricciosa", ingredienti: "Pomodoro, mozzarella, prosciutto cotto, funghi, carciofi, olive", prezzo: "8.50" },
+            { nome: "Quattro Stagioni", ingredienti: "Pomodoro, mozzarella, prosciutto cotto, funghi, carciofi, olive", prezzo: "8.50" },
+            { nome: "Diavola", ingredienti: "Pomodoro, mozzarella, salame piccante", prezzo: "7.00" },
+            { nome: "Ortolana", ingredienti: "Pomodoro, mozzarella, melanzane, zucchine, funghi, peperoni", prezzo: "8.50" },
+            { nome: "Bufalina", ingredienti: "Pomodoro, mozzarella di bufala, basilico", prezzo: "8.50" },
+            { nome: "Americana", ingredienti: "Pomodoro, mozzarella, patatine fritte, wurstel", prezzo: "8.50" },
+            { nome: "Tonno e Cipolla", ingredienti: "Pomodoro, mozzarella, tonno, cipolla", prezzo: "8.00" },
+            { nome: "Delicata", ingredienti: "Pomodoro, mozzarella,panna e crudo", prezzo: "8.50" },
+            { nome: "Salsiccia e friarielli", ingredienti: "Pomodoro, mozzarella, salsiccia fresca e friarielli", prezzo: "9,00" },
+            { nome: "Speck e Scamorza", ingredienti: "Pomodoro, mozzarella, funghi, speck, scamorza", prezzo: "8.50" },
+            { nome: "Marte e Monti", ingredienti: "Pomodoro, mozzarella, funghi, gamberetti, grana, rucola", prezzo: "8.50" },
+            { nome: "della casa", ingredienti: "Pomodoro, mozzarella, grana, prosciutto cotto, rucola,funghi di muschio", prezzo: "9.50" },
+            { nome: "Bufalina e Basilico", ingredienti: "Pomodoro, mozzarella di bufala, basilico", prezzo: "9.00" },
+            { nome: "Porchetta", ingredienti: "Pomodoro, mozzarella, porchetta, salame piccante", prezzo: "9.00" },
+          ].map((pizza) => (
+            <div key={pizza.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="text-xl font-bold">{pizza.nome}</h4>
+                <span className="text-2xl font-bold text-red-600">€{pizza.prezzo}</span>
+              </div>
+              <p className="text-gray-600">{pizza.ingredienti}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
-              {/* SECONDI PIATTI */}
-              <button
-                className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
-                onClick={() => toggleSezioneMenu("secondiPiatti")}
-              >
-                <div className="flex items-center">
-                  <img src="steak.png" className="w-10 h-10 invert mr-4" alt="secondi piatti" />
-                  <span>Secondi Piatti</span>
-                </div>
-                <span>{sezioniMenuAperte.secondiPiatti ? "▲" : "▼"}</span>
-              </button>
-              {sezioniMenuAperte.secondiPiatti && (
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  {[
-                    { nome: "Tagliata di Manzo", ingredienti: "Manzo, rucola, pomodorini, scaglie di grana", prezzo: "16.00" },
-                    { nome: "Grigliata Mista di Carne", ingredienti: "Salsiccia, costine, bistecca, patate al forno", prezzo: "18.00" },
-                    { nome: "Filetto di Branzino", ingredienti: "Branzino, verdure grigliate, limone", prezzo: "15.00" },
-                    { nome: "Cotoletta alla Milanese", ingredienti: "Vitello impanato, patate fritte, limone", prezzo: "14.00" },
-                  ].map((piatto) => (
-                    <div key={piatto.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-xl font-bold text-black-800">{piatto.nome}</h4>
-                        <span className="text-2xl font-bold text-red-600">€{piatto.prezzo}</span>
-                      </div>
-                      <p className="text-gray-600">{piatto.ingredienti}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
+      {/* PIZZE SPECIALI */}
+      <button
+        className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+        onClick={() => toggleSezioneMenu("pizzeSpeciali")}
+      >
+        <div className="flex items-center">
+          <img src="pizza-whole-slice.png" className="w-10 h-10 invert mr-4" alt="pizza" />
+          <span>Pizze Speciali</span>
+        </div>
+        <span>{sezioniMenuAperte.pizzeSpeciali ? "▲" : "▼"}</span>
+      </button>
+      {sezioniMenuAperte.pizzeSpeciali && (
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {[
+            { nome: "La Fattoria", ingredienti: "Mozzarella di latte DOP, pomodoro, funghi porcini, bresaola punta d'anca,grana,rucola e glassa", prezzo: "12.00" },
+            { nome: "Burratina", ingredienti: "Mozzarella di latte DOP, pomodoro, capocollo di M.F., pancetta, burratina, basilico", prezzo: "11.00" },
+            { nome: "Esplosiva", ingredienti: "Mozzarella di latte DOP, battuto di friarielli,salamino piccante, olive nere, pomodoro ciliegino, basilico", prezzo: "11.00" },
+            { nome: "Bolognese", ingredienti: "Mozzarella di latte DOP, mortadella,granella di pistacchio,burratina", prezzo: "11.00" },
+            { nome: "ventricina e gorgonzola", ingredienti: "Mozzarella di latte DOP, pomodoro, ventricina e gorgonzola", prezzo: "11.00" },
+            { nome: "stracciatella", ingredienti: "Mozzarella di latte DOP, staracciatella,bresaola,grana,rucola", prezzo: "11.00" },
+            { nome: "Casereccia", ingredienti: "Mozzarella di latte DOP, pomodoro, cipolla di Tropea, pomodori secchi,peperoncino,capocollo di M.f.", prezzo: "11.00" },
+          ].map((pizza) => (
+            <div key={pizza.nome} className="bg-gradient-to-br from-red-50 to-amber-50 p-6 rounded-lg shadow-md hover:shadow-xl transition border-2 border-red-200">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="text-xl font-bold">{pizza.nome}</h4>
+                <span className="text-2xl font-bold text-red-600">€{pizza.prezzo}</span>
+              </div>
+              <p className="text-gray-600">{pizza.ingredienti}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
+      {/* PRIMI */}
+      <button
+        className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+        onClick={() => toggleSezioneMenu("primi")}
+      >
+        <div className="flex items-center">
+          <img src="fork-spaghetti.png" className="w-10 h-10 invert mr-4" alt="primi" />
+          <span>Primi</span>
+        </div>
+        <span>{sezioniMenuAperte.primi ? "▲" : "▼"}</span>
+      </button>
+      {sezioniMenuAperte.primi && (
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {[
+            { nome: "Spaghetti agli Scampi", ingredienti: "", prezzo: "13.00" },
+            { nome: "Penne all’Arrabbiata", ingredienti: "", prezzo: "10.00" },
+            { nome: "Risotto ai Frutti di Mare", ingredienti: "", prezzo: "12.00" },
+            { nome: "Trofie Salsiccia e Funghi", ingredienti: "", prezzo: "10.00" },
+             { nome: "penne alla pescatora", ingredienti: "", prezzo: "12.00" },
+                { nome: "PIATTO DEL GIORNO", ingredienti: "", prezzo: "VARIA" },
+          ].map((piatto) => (
+            <div key={piatto.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="text-xl font-bold">{piatto.nome}</h4>
+                <span className="text-2xl font-bold text-red-600">€{piatto.prezzo}</span>
+              </div>
+              <p className="text-gray-600">{piatto.ingredienti}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* SECONDI */}
+      <button
+        className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+        onClick={() => toggleSezioneMenu("secondi")}
+      >
+        <div className="flex items-center">
+          <img src="steak.png" className="w-10 h-10 invert mr-4" alt="secondi" />
+          <span>Secondi</span>
+        </div>
+        <span>{sezioniMenuAperte.secondi ? "▲" : "▼"}</span>
+      </button>
+      {sezioniMenuAperte.secondi && (
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {[
+            { nome: "Costata di Vitello", ingredienti: "", prezzo: "12.00" },
+            { nome: "Tagliata di Manzo", ingredienti: "", prezzo: "14.00" },
+            { nome: "Frittura mista mare", ingredienti: "", prezzo: "14.00" },
+             { nome: "Brace mista di carne", ingredienti: "", prezzo: "18.00" },
+             { nome: "PIATTO DEL GIORNO", ingredienti: "", prezzo: "VARIA" },
+            
+          ].map((piatto) => (
+            <div key={piatto.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="text-xl font-bold">{piatto.nome}</h4>
+                <span className="text-2xl font-bold text-red-600">€{piatto.prezzo}</span>
+              </div>
+              <p className="text-gray-600">{piatto.ingredienti}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* CONTORNI */}
+      <button
+        className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
+        onClick={() => toggleSezioneMenu("contorni")}
+      >
+        <div className="flex items-center">
+          <img src="steak.png" className="w-10 h-10 invert mr-4" alt="contorni" />
+          <span>Contorni</span>
+        </div>
+        <span>{sezioniMenuAperte.contorni ? "▲" : "▼"}</span>
+      </button>
+      {sezioniMenuAperte.contorni && (
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {[
+            { nome: "Crocchette o altri fritti", ingredienti: "", prezzo: "5.00" },
+            { nome: "patate fritte", ingredienti: "", prezzo: "5.00" },
+            { nome: "insalata verde", ingredienti: "", prezzo: "5.00" },
+             { nome: "insalata mista", ingredienti: "", prezzo: "7.00" },
+             { nome: "fritto misti", ingredienti: "", prezzo: "12.00" },
+            
+          ].map((piatto) => (
+            <div key={piatto.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="text-xl font-bold">{piatto.nome}</h4>
+                <span className="text-2xl font-bold text-red-600">€{piatto.prezzo}</span>
+              </div>
+              <p className="text-gray-600">{piatto.ingredienti}</p>
+            </div>
+          ))}
+        </div>
+      )}
               {/* BEVANDE */}
               <button
                 className="flex items-center justify-between w-full bg-black text-white px-6 py-3 rounded-lg font-bold mb-4 mt-8"
@@ -676,9 +792,14 @@ function App() {
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   {[
                     { nome: "Acqua Naturale", ingredienti: "Bottiglia 1L", prezzo: "2.00" },
-                    { nome: "Coca Cola", ingredienti: "Lattina 33cl", prezzo: "3.00" },
-                    { nome: "Birra alla Spina", ingredienti: "Media 40cl", prezzo: "4.50" },
+                    { nome: "Coca Cola", ingredienti: "Lattina 33cl", prezzo: "2.50" },
+                    { nome: "Fanta", ingredienti: "Lattina 33cl", prezzo: "2.50" },
+                    { nome: "coca cola", ingredienti: "bottiglia 1,5L", prezzo: "4.00" },
+                    { nome: "fanta", ingredienti: "Bottiglia 1,5L", prezzo: "4.00" },
+                    { nome: "Birra alla Spina", ingredienti: "Media 40cl", prezzo: " A SECONDA DI DISPONIBILITA'" },
                     { nome: "Vino della Casa", ingredienti: "Rosso o Bianco, calice", prezzo: "4.00" },
+                    { nome: "Birra IN BOTTIGLIA", ingredienti: "RAFFO,DREHER.HEINEKEN,NASTRO AZZURRO", prezzo: " A SECONDA DI DISPONIBILITA'" },
+                    
                   ].map((bevanda) => (
                     <div key={bevanda.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
                       <div className="flex justify-between items-start mb-2">
@@ -708,7 +829,7 @@ function App() {
                     { nome: "Tiramisù", ingredienti: "Savoiardi, mascarpone, caffè, cacao", prezzo: "6.00" },
                     { nome: "Panna Cotta", ingredienti: "Panna cotta con frutti di bosco", prezzo: "5.50" },
                     { nome: "Cheesecake", ingredienti: "New York style con coulis di frutti rossi", prezzo: "6.50" },
-                    { nome: "Profiteroles", ingredienti: "Bignè con crema e cioccolato", prezzo: "6.00" },
+                    { nome: "DOLCE DEL GIORNO", ingredienti: "Varia a seconda della disponibilità", prezzo: "00" },
                   ].map((dolce) => (
                     <div key={dolce.nome} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
                       <div className="flex justify-between items-start mb-2">
