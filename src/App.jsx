@@ -163,13 +163,47 @@ const MENU_SECTIONS = [
 ];
 
 const EVENTI = [
-  { id: 1, titolo: "Karaoke & Live Music", data: "Ogni Sabato", ora: "20:00 – 23:00", descrizione: "Pizza, dolci e bevande. Perfetto per famiglie e gruppi di amici!", img: "/tanto.jpg" },
-  { id: 4, titolo: "Gran Cenone di San Silvestro", data: "31 Dicembre 2026", ora: "20:00 – 2:00", descrizione: "Evento e locandina ancora non disponibili.", img: "" },
-  { id: 2, titolo: "San Valentino", data: "14 Febbraio 2026", ora: "19:00 – 00:00", descrizione: "Menù speciale per coppie. Prenota il tuo tavolo e goditi la serata con musica dal vivo.", img: "/sanvale.png" },
-  { id: 3, titolo: "Festa della Donna", data: "8 Marzo 2026", ora: "21:00 – 23:30", descrizione: "Musica dal vivo. Ambiente magico per una serata indimenticabile!", img: "/donnapizzeria.jpg" },
-  { id: 5, titolo: "Festa del Papà", data: "19 Marzo 2026", ora: "20:00 – 00:00", descrizione: "Serata spettacolare con menù speciale, musica e brindisi. Prenota subito!", img: "/festa_papa.jpg" },
+  { 
+    id: 1, 
+    titolo: "Karaoke & Live Music", 
+    data: "Ogni Sabato", 
+    ora: "20:00 – 23:00", 
+    descrizione: "Pizza, dolci e bevande. Perfetto per famiglie e gruppi di amici!", 
+    img: "/tanto.jpg" 
+  },
+  { 
+    id: 4, 
+    titolo: "Gran Cenone di San Silvestro", 
+    data: "31 Dicembre 2026", 
+    ora: "20:00 – 2:00", 
+    descrizione: "Evento e locandina ancora non disponibili.", 
+    img: null  // ← Cambiato da "" a null
+  },
+  { 
+    id: 2, 
+    titolo: "San Valentino", 
+    data: "14 Febbraio 2026", 
+    ora: "19:00 – 00:00", 
+    descrizione: "Menù speciale per coppie. Prenota il tuo tavolo e goditi la serata con musica dal vivo.", 
+    img: "/sanvale.png" 
+  },
+  { 
+    id: 3, 
+    titolo: "Festa della Donna", 
+    data: "8 Marzo 2026", 
+    ora: "21:00 – 23:30", 
+    descrizione: "Musica dal vivo. Ambiente magico per una serata indimenticabile!", 
+    img: "/donnapizzeria.jpg" 
+  },
+  { 
+    id: 5, 
+    titolo: "Festa del Papà", 
+    data: "19 Marzo 2026", 
+    ora: "20:00 – 00:00", 
+    descrizione: "Serata spettacolare con menù speciale, musica e brindisi. Prenota subito!", 
+    img: "/festa_papa.jpg" 
+  },
 ];
-
 /* ─── STILI GLOBALI ─────────────────────────────────────────────────────── */
 const globalStyle = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -343,8 +377,21 @@ const globalStyle = `
 
   /* SALA CARD */
   .sala-card { background: var(--gray-800); border-radius: 20px; overflow: hidden; border: 1px solid var(--gray-700); }
-  .sala-img { width: 100%; height: 280px; object-fit: cover; }
-  @media(min-width:768px){ .sala-img { height: 380px; } }
+  .sala-img {
+  width: 100%;
+  height: 220px; /* Ridotto per mobile */
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .sala-img {
+    height: 380px;
+  }
+}
+@media (max-width: 480px) {
+  .sala-img {
+    height: 200px; /* Ancora più piccolo */
+  }
+}
   .sala-badge { display: inline-block; background: var(--gray-900); border: 1px solid var(--gold-dark); color: var(--gold); padding: 6px 16px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px; }
 
   /* STAT ROW */
