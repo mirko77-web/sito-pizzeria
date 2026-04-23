@@ -163,9 +163,9 @@ const MENU_SECTIONS = [
 ];
 
 const EVENTI = [
-  { id: 1, titolo: "Karaoke & Live Music", data: "Ogni Sabato", ora: "20:00 – 23:00", descrizione: "Pizza, dolci e bevande. Perfetto per famiglie e gruppi di amici!", img: "/TANTO.jpg" },
+  { id: 1, titolo: "Karaoke & Live Music", data: "Ogni Sabato", ora: "20:00 – 23:00", descrizione: "Pizza, dolci e bevande. Perfetto per famiglie e gruppi di amici!", img: "/tanto.jpg" },
   { id: 4, titolo: "Gran Cenone di San Silvestro", data: "31 Dicembre 2026", ora: "20:00 – 2:00", descrizione: "Evento e locandina ancora non disponibili.", img: "" },
-  { id: 2, titolo: "San Valentino", data: "14 Febbraio 2026", ora: "19:00 – 00:00", descrizione: "Menù speciale per coppie. Prenota il tuo tavolo e goditi la serata con musica dal vivo.", img: "/sanvale.png.png" },
+  { id: 2, titolo: "San Valentino", data: "14 Febbraio 2026", ora: "19:00 – 00:00", descrizione: "Menù speciale per coppie. Prenota il tuo tavolo e goditi la serata con musica dal vivo.", img: "/sanvale.png" },
   { id: 3, titolo: "Festa della Donna", data: "8 Marzo 2026", ora: "21:00 – 23:30", descrizione: "Musica dal vivo. Ambiente magico per una serata indimenticabile!", img: "/donnapizzeria.jpg" },
   { id: 5, titolo: "Festa del Papà", data: "19 Marzo 2026", ora: "20:00 – 00:00", descrizione: "Serata spettacolare con menù speciale, musica e brindisi. Prenota subito!", img: "/festa_papa.jpg" },
 ];
@@ -538,10 +538,10 @@ export default function App() {
             <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 16px 40px", display: "flex", flexDirection: "column", gap: 32 }}>
               {[
                 {
-                  img: "/sala perla 2.jpeg", alt: "Sala Principale", badge: "Sala Principale",
+                  img: "/sala2.jpeg", alt: "Sala Principale", badge: "Sala Principale",
                   title: "Sala Principale",
                   desc: "Un ambiente caldo e accogliente dove gustare le nostre specialità in un'atmosfera familiare.",
-                  stats: [{ e: "👥", l: "110 Posti", s: "Capacità totale" }, { e: "❄️", l: "Climatizzata", s: "Estate e inverno" }, { e: "🎵", l: "Musica Live", s: "Ambiente rilassante" }],
+                  stats: [{ e: "👥", l: "110 Posti", s: "Capacità totale" }, { e: "❄️", l: "Climatizzata", s: "Estate e inverno" }, ],
                   chips: ["✓ Wi-Fi gratuito", "✓ Accessibile", "✗ No Fumatori"],
                   btnLabel: "Prenota un Tavolo", btnMsg: "Ciao! Vorrei prenotare un tavolo in Sala Principale."
                 },
@@ -549,15 +549,15 @@ export default function App() {
                   video: "/video sala giardino.mp4", alt: "Giardino", badge: "Giardino & Feste",
                   title: "Giardino & Feste",
                   desc: "Uno spazio all'aperto ideale per feste, battesimi, comunioni e cene sotto le stelle.",
-                  stats: [{ e: "🎊", l: "Fino a 70 persone", s: "Perfetto per eventi" }, { e: "💡", l: "Illuminazione", s: "Scenografica" }],
+                  stats: [{ e: "🎊", l: "Fino a 70 persone", s: "Perfetto per eventi" },],
                   chips: ["✓ 70 mq", "✓ Zona coperta", "✓ Parcheggio"],
-                  btnLabel: "Richiedi Preventivo", btnMsg: "Ciao! Vorrei un preventivo per il Giardino & Feste."
+                  btnLabel: "Richiedi Preventivo", btnMsg: "Ciao! Vorrei un preventivo per un evento nel Giardino."
                 },
                 {
                   img: "/sala perla 1.jpeg", alt: "Sala Eventi", badge: "Sala Eventi",
                   title: "Sala Eventi",
-                  desc: "Spazio elegante per matrimoni, compleanni, battesimi e cerimonie aziendali.",
-                  stats: [{ e: "💍", l: "Fino a 120 persone", s: "Grandi eventi" }, { e: "🎤", l: "Audio Pro", s: "Sistema professionale" }, { e: "🍽️", l: "Menù Custom", s: "Personalizzabile" }],
+                  desc: "Spazio elegante per matrimoni, compleanni, battesimi e cerimonie aziendali, feste private.",
+                  stats: [{ e: "💍", l: "Fino a 120 persone", s: "Grandi eventi" }, { e: "🍽️", l: "Menù Custom", s: "Personalizzabile" }],
                   chips: ["✓ Catering", "✓ Decorazioni", "✓ Staff dedicato"],
                   btnLabel: "Organizza Evento", btnMsg: "Ciao! Vorrei organizzare un evento nella Sala Eventi."
                 },
