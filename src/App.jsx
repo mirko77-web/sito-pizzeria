@@ -420,6 +420,12 @@ const globalStyle = `
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
+.social-link img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
 
 
 
