@@ -177,7 +177,7 @@ const EVENTI = [
     data: "31 Dicembre 2026", 
     ora: "20:00 – 2:00", 
     descrizione: "Evento e locandina ancora non disponibili.", 
-    img: null  // ← Cambiato da "" a null
+    img: "/capo.jpg"
   },
   { 
     id: 2, 
@@ -201,7 +201,7 @@ const EVENTI = [
     data: "19 Marzo 2026", 
     ora: "20:00 – 00:00", 
     descrizione: "Serata spettacolare con menù speciale, musica e brindisi. Prenota subito!", 
-    img: "/festa_papa.jpg" 
+    img: "/papa.jpg" 
   },
 ];
 /* ─── STILI GLOBALI ─────────────────────────────────────────────────────── */
@@ -799,7 +799,7 @@ export default function App() {
               {[
                 { href: "https://www.facebook.com/laperlacoffeebeerwine?mibextid=wwXIfr", icon: "/facebook.png", name: "Facebook", handle: "@laperlacoffeebeerwine", color: "#1877F2" },
                 { href: "https://www.instagram.com/laperla_avetrana?igsh=MWh3dTl1MHM2ejNkbQ%3D%3D", icon: "/camera.png", name: "Instagram", handle: "@laperla_avetrana", color: "#E1306C" },
-                { href: "https://www.google.com/search?q=la+perla+avetrana", icon: "/google-logo.jpg", name: "Google", handle: "La Perla – Avetrana", color: "#4285F4" },
+                { href: "https://www.google.com/search?q=la+perla+avetrana", icon: "/google.png", name: "Google", handle: "La Perla – Avetrana", color: "#4285F4" },
               ].map((s) => (
                 <a key={s.name} className="social-link" href={s.href} target="_blank" rel="noopener noreferrer">
                   <img src={s.icon} alt={s.name} />
