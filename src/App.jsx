@@ -203,6 +203,14 @@ const EVENTI = [
     descrizione: "Serata spettacolare con menù speciale, musica e brindisi. Prenota subito!", 
     img: "/papa.jpg" 
   },
+  { 
+    id: 6,
+    titolo: "sagra della polpetta 25° anniversario",
+    data: "13 Agosto 2026", 
+    ora: "19:00 – 02:00", 
+    descrizione: "25a sagra della polpetta, piazza V.Veneto - Avetrana.", 
+    img: "/polpetta.png" 
+  }
 ];
 /* ─── STILI GLOBALI ─────────────────────────────────────────────────────── */
 const globalStyle = `
