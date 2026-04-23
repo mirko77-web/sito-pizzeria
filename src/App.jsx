@@ -542,22 +542,23 @@ export default function App() {
         {sezione === "home" && (
           <div>
             {/* HERO */}
-            <div className="hero">
-              <video autoPlay loop muted playsInline>
-                <source src="/pizza.mp4" type="video/mp4" />
-              </video>
-              <div className="hero-overlay" />
-              <div className="hero-content">
-                <img src="/laperla.png" alt="La Perla" className="hero-logo" />
-                <div className="gold-divider" />
-                <p style={{ fontFamily: "var(--font-display)", fontStyle: "italic", color: "var(--gold-light)", fontSize: "clamp(1rem,3vw,1.3rem)", letterSpacing: "0.05em" }}>
-                  Dal 1993 · Avetrana
-                </p>
-                <button className="btn-primary" onClick={() => apriWhatsApp("Ciao! Vorrei prenotare un tavolo alla Pizzeria La Perla. Potete aiutarmi?")}>
-                  Prenota un Tavolo
-                </button>
-              </div>
-            </div>
+           {/* HERO */}
+<div className="hero">
+  <video autoPlay loop muted playsInline preload="none" poster="/poster.jpg">
+    <source src="/pizza.webm" type="video/webm" />
+  </video>
+  <div className="hero-overlay" />
+  <div className="hero-content">
+    <img src="/laperla.png" alt="La Perla" className="hero-logo" />
+    <div className="gold-divider" />
+    <p style={{ fontFamily: "var(--font-display)", fontStyle: "italic", color: "var(--gold-light)", fontSize: "clamp(1rem,3vw,1.3rem)", letterSpacing: "0.05em" }}>
+      Dal 1993 · Avetrana
+    </p>
+    <button className="btn-primary" onClick={() => apriWhatsApp("Ciao! Vorrei prenotare un tavolo alla Pizzeria La Perla. Potete aiutarmi?")}>
+      Prenota un Tavolo
+    </button>
+  </div>
+</div>
 
             {/* STORIA */}
             <div className="section-wrap">
