@@ -403,7 +403,17 @@ const globalStyle = `
   /* SOCIAL LINKS */
   .social-link { display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--gray-800); border: 1px solid var(--gray-700); border-radius: var(--radius); text-decoration: none; color: var(--white); transition: all var(--transition); }
   .social-link:hover { border-color: var(--gold); background: rgba(201,169,110,0.06); transform: translateX(4px); }
-  .social-link img { width: 40px; height: 40px; object-fit: contain; }
+  
+}
+  .social-link {
+  background: rgba(255, 255, 255, 0.05); /* leggero vetro */
+  padding: 14px 18px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
 
   /* CONTACT FORM */
   .form-group label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
